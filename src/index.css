@@ -22,6 +22,9 @@
   --color-cornsilk: #FFF6D7;
   --color-eerie-black: #201F1E;
   --color-baby-powder: #FFFEFA;
+
+  --color-success: #57886C;
+  --color-error: #BF3343;
 }
 
 a {
