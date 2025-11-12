@@ -44,7 +44,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  cursor: url('cursor.svg'), url('cursor.png'), url('cursor.cur'), auto;
+  cursor: url('/cursor.svg'), url('/cursor.png'), url('/cursor.cur'), auto;
   background-color: var(--background-color);
 }
 
