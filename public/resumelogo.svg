@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 135.46667 135.46667"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <linearGradient
+       id="swatch8">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop8" />
+    </linearGradient>
+  </defs>
+  <g
+     id="layer2"
+     transform="translate(-2.7764112,7.8664972)">
+    <circle
+       style="fill:#f9a1ce;fill-opacity:1;stroke:#f9a1ce;stroke-width:2.64583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="path5-9"
+       cx="103.2715"
+       cy="107.77515"
+       r="14.873201" />
+    <path
+       style="fill:#f9a1ce;fill-opacity:1;stroke:#f9a1ce;stroke-width:4.95034;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       d="M 26.357628,6.991758 54.808433,113.1716 C 70.648824,89.535115 82.971598,79.141549 103.35161,72.399781 c 5.00523,-1.655735 10.49643,-3.0912 16.64508,-4.448488 z"
+       id="path2-0" />
+  </g>
+  <g
+     id="layer1"
+     style="display:inline">
+    <path
+       style="fill:none;fill-opacity:1;stroke:#f15391;stroke-width:4.95034;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       d="M 13.798519,12.464826 42.249325,118.64467 C 58.089716,95.008185 70.412496,84.614621 90.792508,77.872852 95.79772,76.217116 101.28892,74.781653 107.43756,73.424362 Z"
+       id="path2" />
+    <circle
+       style="fill:none;fill-opacity:1;stroke:#f15391;stroke-width:4.95034;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="path5"
+       cx="90.77478"
+       cy="113.36168"
+       r="14.873201" />
+  </g>
+  <g
+     id="layer3">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:79.0841px;font-family:AppleGothic;-inkscape-font-specification:AppleGothic;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#f9a1ce;stroke-width:5.93131;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+       x="38.50631"
+       y="90.340202"
+       id="text8"><tspan
+         id="tspan8"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:79.0841px;font-family:AppleGothic;-inkscape-font-specification:AppleGothic;stroke:#f9a1ce;stroke-width:5.93131;stroke-linecap:butt;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+         x="38.50631"
+         y="90.340202">K</tspan></text>
+  </g>
+</svg>
