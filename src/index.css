@@ -4,7 +4,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: #201F1E;
   background-color: #FFFEFA;
 
   font-synthesis: none;
@@ -13,13 +13,13 @@
   -moz-osx-font-smoothing: grayscale;
 
   --background-color: #FFFEFA;
-  --background-color-dark: #201F1E;
+  --button-background-color: #FFE9CC;
   --primary-color: #f15391;
   --secondary-color: #AE8997;
   --text-color-dark: #46202A;
-  --text-color-light: #fff;
-  --link-color: #AA0E4C;
-  --link-hover-color: #5F072A;
+
+  --link-color: #E21266;
+  --link-hover-color: #A30F4A;
 
   --color-claret: #7B253F;
   --color-cornsilk: #FFF6D7;
@@ -29,6 +29,20 @@
   --color-success: #70d11b;
   --color-error: #e7162e;
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark theme overrides */
+    color: #FFE9C7;
+    background-color: #201F1E;
+    --text-color: #FFE9C7;
+    --background-color: #201F1E;
+    --link-color: #F9A1CE;
+    --link-hover-color: #FBD0E6;
+    --button-background-color: #786E68;
+  }
+}
+
 
 a {
   font-weight: 500;
@@ -62,7 +76,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: var(--background-color);
+  background-color: var(--button-background-color);
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -73,20 +87,5 @@ button:hover {
 
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: var(--text-color-dark);
-    background-color: var(--background-color);
-  }
-
-  a:hover {
-    color: var(--link-hover-color);
-  }
-
-  button {
-    background-color: var(--background-color);
-  }
+  outline: 4px auto var(--primary-color);
 }
