@@ -9,8 +9,46 @@
 </head>
 
 <body>
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
   <div id="root"></div>
   <script type="module" src="/src/index.tsx"></script>
+  <script>
+    const root = document.documentElement;
+    const darkTheme = "dark";
+    const lightTheme = "light";
+
+    window.addEventListener("DOMContentLoaded", () => {
+      const btn = document.getElementById("theme-toggle");
+      if (!btn) {
+        console.warn("theme-toggle button not found");
+        return;
+      }
+
+      function applyTheme(theme) {
+        const isDark = theme === darkTheme;
+
+        root.classList.toggle(darkTheme, isDark);
+        localStorage.setItem("theme", isDark ? darkTheme : lightTheme);
+
+        btn.textContent = isDark ? "🌞" : "🌙";
+      }
+
+      const saved = localStorage.getItem("theme");
+      if (saved === darkTheme || saved === lightTheme) {
+        applyTheme(saved);
+      } else if (window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        applyTheme(darkTheme);
+      } else {
+        applyTheme(lightTheme);
+      }
+
+      btn.addEventListener("click", () => {
+        const isDark = root.classList.contains(darkTheme);
+        applyTheme(isDark ? lightTheme : darkTheme);
+      });
+    });
+  </script>
 </body>
 
 </html>
