@@ -77,9 +77,14 @@ button:hover {
   border-color: var(--primary-color);
 }
 
-button:focus,
+button:focus {
+  outline: none;
+}
+
 button:focus-visible {
   outline: 4px auto var(--primary-color);
+  outline-offset: 2px;
+  box-shadow: none;
 }
 
 .theme-toggle {

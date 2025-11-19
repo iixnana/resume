@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Logo from '/resumelogo.svg'
-import './App.css'
+import '../style/App.css'
 import { motion } from "motion/react"
 
 function App() {
