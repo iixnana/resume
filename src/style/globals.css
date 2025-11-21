@@ -12,6 +12,7 @@
 
   --background-color: #FFFEFA;
   --card-background-color: #FFF5E5;
+  --folder-background-color: #ffe190;
   --button-background-color: #FFE9CC;
   --primary-color: #f15391;
   --secondary-color: #AE8997;
@@ -21,8 +22,9 @@
   --theme-toggle-background: #FFF;
   --theme-toggle-border: #f15391;
 
-  --max-width: 1280px;
-  --page-padding: 6rem;
+  --container-size: 1280px;
+  --folder-size:
+
 }
 
 :root.dark {
@@ -30,9 +32,15 @@
   --text-color: #FFE9C7;
   --background-color: #201F1E;
   --card-background-color: #403C3A;
+  --folder-background-color: #e3ab45;
   --link-color: #F9A1CE;
   --link-hover-color: #FBD0E6;
   --button-background-color: #786E68;
   --theme-toggle-background: #000;
   --theme-toggle-border: #f15391;
+}
+
+#root {
+  max-width: var(--container-size);
+  margin: 0 auto;
 }
