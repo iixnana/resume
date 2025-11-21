@@ -1,11 +1,10 @@
-import { useState } from 'react'
-import Logo from '/resumelogo.svg'
-import './App.css'
-import { motion } from "motion/react"
+import { motion } from "motion/react";
+import { useState } from "react";
+import Logo from "/resumelogo.svg";
+import "./Home.css";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export const Home = () => {
+  const [count, setCount] = useState(0);
 
   return (
     <>
@@ -15,7 +14,12 @@ function App() {
         className="logo"
         drag
         whileDrag={{ scale: 1.05, cursor: "grabbing" }}
-        style={{ width: 240, borderRadius: 12, userSelect: "none", touchAction: "none" }}
+        style={{
+          width: 240,
+          borderRadius: 12,
+          userSelect: "none",
+          touchAction: "none",
+        }}
         draggable={false} // prevent the browser's native image drag ghost
         dragConstraints={{
           top: -100,
@@ -32,7 +36,5 @@ function App() {
         </button>
       </div>
     </>
-  )
-}
-
-export default App
+  );
+};

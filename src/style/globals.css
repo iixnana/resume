@@ -1,0 +1,37 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --background-color: #FFFEFA;
+  --button-background-color: #FFE9CC;
+  --primary-color: #f15391;
+  --secondary-color: #AE8997;
+  --text-color: #201F1E;
+  --link-color: #E21266;
+  --link-hover-color: #A30F4A;
+  --color-claret: #7B253F;
+  --color-cornsilk: #FFF6D7;
+  --color-eerie-black: #201F1E;
+  --color-baby-powder: #FFFEFA;
+  --theme-toggle-background: #FFF;
+  --theme-toggle-border: #f15391;
+}
+
+:root.dark {
+  /* Dark theme overrides */
+  --text-color: #FFE9C7;
+  --background-color: #201F1E;
+  --link-color: #F9A1CE;
+  --link-hover-color: #FBD0E6;
+  --button-background-color: #786E68;
+  --theme-toggle-background: #000;
+  --theme-toggle-border: #f15391;
+}
