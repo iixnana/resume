@@ -21,8 +21,6 @@
   --theme-toggle-background: #FFF;
   --theme-toggle-border: #f15391;
 
-  --max-width: 1280px;
-  --page-padding: 6rem;
 }
 
 :root.dark {
@@ -35,4 +33,9 @@
   --button-background-color: #786E68;
   --theme-toggle-background: #000;
   --theme-toggle-border: #f15391;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
 }

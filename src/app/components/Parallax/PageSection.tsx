@@ -13,6 +13,12 @@ export const PageSection = ({ id }: SectionProps) => {
 
   return (
     <section className="section-container">
+      <motion.h2
+        // Hide until scroll progress is measured
+        initial={{ visibility: "hidden" }}
+        animate={{ visibility: "visible" }}
+        style={{ y }}
+      >{`#00${id}`}</motion.h2>
       <div ref={ref} className="section-box">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in mauris
         consectetur, lobortis ante ut, hendrerit elit. Nam condimentum enim
@@ -66,12 +72,6 @@ export const PageSection = ({ id }: SectionProps) => {
         vestibulum blandit, ex ex posuere ipsum, id congue nibh ipsum id odio.
         Quisque lorem quam, mattis in porttitor at, varius at odio.
       </div>
-      <motion.h2
-        // Hide until scroll progress is measured
-        initial={{ visibility: "hidden" }}
-        animate={{ visibility: "visible" }}
-        style={{ y }}
-      >{`#00${id}`}</motion.h2>
     </section>
   );
 };
