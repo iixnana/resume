@@ -1,6 +1,6 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import { NavigationRoute } from "./routes";
-import { Home } from "../pages/Home/Home";
+import { Home } from "../pages/Home/Home.parallax";
 import { Contact } from "../pages/ContactMe/Contact";
 import App from "../App";
 import { NotFound } from "../pages/Error/NotFound";
