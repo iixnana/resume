@@ -11,7 +11,7 @@
   -moz-osx-font-smoothing: grayscale;
 
   --background-color: #FFFEFA;
-  --box-background-color: #FFE9CC;
+  --card-background-color: #FFF5E5;
   --button-background-color: #FFE9CC;
   --primary-color: #f15391;
   --secondary-color: #AE8997;
@@ -20,13 +20,16 @@
   --link-hover-color: #A30F4A;
   --theme-toggle-background: #FFF;
   --theme-toggle-border: #f15391;
+
+  --max-width: 1280px;
+  --page-padding: 6rem;
 }
 
 :root.dark {
   /* Dark theme overrides */
   --text-color: #FFE9C7;
   --background-color: #201F1E;
-  --box-background-color: #201F1E;
+  --card-background-color: #403C3A;
   --link-color: #F9A1CE;
   --link-hover-color: #FBD0E6;
   --button-background-color: #786E68;

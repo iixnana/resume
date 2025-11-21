@@ -1,8 +1,8 @@
 import { motion, useScroll, useSpring } from "motion/react";
-import "./Home.parallax.css";
-import { PageSection } from "../../components/PageSection/PageSection";
+import "./Parallax.css";
+import { PageSection } from "./PageSection";
 
-export const Home = () => {
+export const Parallax = () => {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -11,7 +11,7 @@ export const Home = () => {
   });
 
   return (
-    <div id="resume">
+    <div id="parallax-page">
       {[1, 2, 3, 4, 5].map((section) => (
         <PageSection key={section} id={section} />
       ))}

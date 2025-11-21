@@ -17,8 +17,6 @@ body {
   cursor: url('/cursor.svg'), url('/cursor.png'), url('/cursor.cur'), auto;
   color: var(--text-color);
   background-color: var(--background-color);
-  max-width: 1280px;
-  padding: 6rem;
 }
 
 h1 {
