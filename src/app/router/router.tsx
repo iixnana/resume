@@ -1,10 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
-import App from "../App";
 import { NavigationRoute } from "./routes";
+import { Home } from "../pages/Home/Home";
 
 export const router = createBrowserRouter([
   {
     path: NavigationRoute.Index,
-    element: <App />,
-    children: []
-  }]);
+    element: <Home />,
+    children: [],
+  },
+]);

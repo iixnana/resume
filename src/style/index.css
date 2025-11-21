@@ -15,10 +15,8 @@
   --primary-color: #f15391;
   --secondary-color: #AE8997;
   --text-color: #201F1E;
-
   --link-color: #E21266;
   --link-hover-color: #A30F4A;
-
   --color-claret: #7B253F;
   --color-cornsilk: #FFF6D7;
   --color-eerie-black: #201F1E;
@@ -91,7 +89,7 @@ button:focus-visible {
   position: fixed;
   bottom: 1rem;
   right: 1rem;
-  padding: 0.6em 0.6em;
+  padding: 0.6em;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -110,4 +108,16 @@ button {
     background-color 0.25s ease,
     color 0.25s ease,
     border-color 0.25s ease;
+}
+
+.screen-reader-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
