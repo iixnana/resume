@@ -1,5 +1,20 @@
+html {
+    scroll-snap-type: y mandatory;
+}
+
+.progress {
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--primary-color);
+    bottom: 6rem;
+    transform: scaleX(0);
+}
+
 .section-container {
     height: 100vh;
+    width: 100vw;
     scroll-snap-align: start;
     display: flex;
     justify-content: center;
@@ -7,33 +22,23 @@
     position: relative;
 }
 
-.section-container>div {
-    width: 300px;
-    height: 400px;
+.section-box {
+    max-width: 1028px;
+    height: 85vh;
     margin: 20px;
-    background: #f5f5f5;
+    background: var(--card-background-color);
     overflow: hidden;
 }
 
-.section-container img {
-    width: 300px;
-    height: 400px;
-}
-
 @media (max-width: 500px) {
-    .section-container>div {
-        width: 150px;
-        height: 200px;
-    }
-
-    .section-container img {
+    .section-box {
         width: 150px;
         height: 200px;
     }
 }
 
 .section-container h2 {
-    color: #8df0cc;
+    color: var(--primary-color);
     margin: 0;
     font-family: "Azeret Mono", monospace;
     font-size: 50px;
