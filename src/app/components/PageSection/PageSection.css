@@ -7,11 +7,11 @@
     position: relative;
 }
 
-.section-container>div {
+.section-box {
     width: 300px;
     height: 400px;
     margin: 20px;
-    background: #f5f5f5;
+    background: var(--box-background-color);
     overflow: hidden;
 }
 
@@ -21,19 +21,14 @@
 }
 
 @media (max-width: 500px) {
-    .section-container>div {
-        width: 150px;
-        height: 200px;
-    }
-
-    .section-container img {
+    .section-box {
         width: 150px;
         height: 200px;
     }
 }
 
 .section-container h2 {
-    color: #8df0cc;
+    color: var(--primary-color);
     margin: 0;
     font-family: "Azeret Mono", monospace;
     font-size: 50px;

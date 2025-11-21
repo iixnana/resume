@@ -14,7 +14,9 @@ export const PageSection = ({ id }: SectionProps) => {
 
   return (
     <section className="section-container">
-      <div ref={ref}>Section #{id}</div>
+      <div ref={ref} className="section-box">
+        Section #{id}
+      </div>
       <motion.h2
         // Hide until scroll progress is measured
         initial={{ visibility: "hidden" }}
