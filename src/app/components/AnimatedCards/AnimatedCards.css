@@ -15,7 +15,7 @@
     position: relative;
     width: var(--container-size);
     height: 100vh;
-    margin-bottom: var(--card-height);
+    margin-bottom: 400px;
 }
 
 .animated-card {
@@ -23,13 +23,12 @@
     position: absolute;
     top: 80vh;
     font-size: clamp(2.5rem, 6vw, 7rem);
-    width: min(70vw, 62.5rem);
+    width: min(69vw, 61rem);
     height: var(--card-height);
-
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 1.5rem;
+    border-radius: 1rem;
     background: var(--card-background-color);
 }
 
@@ -37,7 +36,6 @@
 .folder {
     position: absolute;
     width: min(70vw, 62.5rem);
-
     top: 82vh;
     z-index: 1000;
 
@@ -52,7 +50,16 @@
         top: 79vh;
 
         path {
-            fill: #a40d48;
+            fill: #d0bb81;
         }
     }
+}
+
+.hide-bounce-overflow {
+    position: absolute;
+    background-color: var(--background-color);
+    height: 400px;
+    z-index: 999;
+    width: 100%;
+    bottom: -600px;
 }

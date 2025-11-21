@@ -31,6 +31,7 @@ export const Card = ({ content, i }: CardProps) => {
       viewport={{ amount: 1 }}
     >
       <Folder className="folder" />
+      <div className="hide-bounce-overflow" />
       <motion.div variants={cardVariants} className="animated-card">
         {content}
       </motion.div>
