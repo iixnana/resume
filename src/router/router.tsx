@@ -1,9 +1,9 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import { NavigationRoute } from "./routes";
-import { Home } from "../pages/Home/Home.parallax";
-import { Contact } from "../pages/ContactMe/Contact";
-import App from "../App";
-import { NotFound } from "../pages/Error/NotFound";
+import { Home } from "../app/pages/Home/Home.parallax";
+import { Contact } from "../app/pages/ContactMe/Contact";
+import App from "../app/App";
+import { NotFound } from "../app/pages/Error/NotFound";
 
 export const router = createBrowserRouter([
   {

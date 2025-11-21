@@ -1,15 +1,21 @@
-import { motion } from "motion/react";
-import { useRef } from "react";
+import { motion, useScroll, useSpring } from "motion/react";
 import "./Home.parallax.css";
-import { PageSection } from "./PageSection";
+import { PageSection } from "../../components/PageSection/PageSection";
 
 export const Home = () => {
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+
   return (
-    <div id="example">
+    <div id="resume">
       {[1, 2, 3, 4, 5].map((section) => (
         <PageSection key={section} id={section} />
       ))}
-      <div className="progress" />
+      <motion.div className="progress" style={{ scaleX }} />
     </div>
   );
 };
