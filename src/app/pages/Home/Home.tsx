@@ -1,10 +1,8 @@
 import "./Home.css";
-import { Parallax } from "../../components/Parallax/Parallax";
+import { AnimatedCards } from "../../components/AnimatedCards/AnimatedCards";
 
 export const Home = () => {
-  return (
-    <>
-      <Parallax />
-    </>
-  );
+  const food: string[] = ["🍅", "🍊", "🍋", "🍐", "🍏", "🫐", "🍆", "🍇"];
+
+  return <AnimatedCards cardContent={food} />;
 };

@@ -1,0 +1,58 @@
+:root {
+    --card-height: 600px;
+    --container-size: min(100vw, 1200px);
+}
+
+.container {
+    width: var(--container-size);
+    min-height: 100vh;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: var(--container-size);
+    height: 100vh;
+    margin-bottom: var(--card-height);
+}
+
+.animated-card {
+    z-index: 1;
+    position: absolute;
+    top: 80vh;
+    font-size: clamp(2.5rem, 6vw, 7rem);
+    width: min(70vw, 62.5rem);
+    height: var(--card-height);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.5rem;
+    background: var(--card-background-color);
+}
+
+
+.folder {
+    position: absolute;
+    width: min(70vw, 62.5rem);
+
+    top: 82vh;
+    z-index: 1000;
+
+    path {
+        fill: var(--folder-background-color);
+    }
+
+    &.backside {
+        transform: scaleX(-1);
+        transform-origin: center;
+        z-index: -1000;
+        top: 79vh;
+
+        path {
+            fill: #a40d48;
+        }
+    }
+}
