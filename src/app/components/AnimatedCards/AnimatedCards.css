@@ -22,12 +22,13 @@
     z-index: 1;
     position: absolute;
     top: 80vh;
-    font-size: clamp(2.5rem, 6vw, 7rem);
-    width: min(69vw, 61rem);
+    width: 55rem;
     height: var(--card-height);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 3rem;
     border-radius: 1rem;
     background: var(--card-background-color);
 }
@@ -60,6 +61,6 @@
     background-color: var(--background-color);
     height: 400px;
     z-index: 999;
-    width: 100%;
+    width: 61rem;
     bottom: -600px;
 }

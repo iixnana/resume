@@ -1,9 +1,10 @@
 import { motion } from "motion/react";
 import type { Variants } from "motion/react";
 import { Folder } from "../../../svg/Folder";
+import type { Experience } from "../../../types/experience";
 
 interface CardProps {
-  content: string;
+  content: Experience;
   i: number;
 }
 
@@ -28,12 +29,16 @@ export const Card = ({ content, i }: CardProps) => {
       className="card-container"
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ amount: 1 }}
+      viewport={{ amount: 0.8 }}
     >
       <Folder className="folder" />
       <div className="hide-bounce-overflow" />
       <motion.div variants={cardVariants} className="animated-card">
-        {content}
+        <div>{content.title}</div>
+        <div>{content.place}</div>
+        <div>{content.timespan}</div>
+        <div>{content.languages}</div>
+        <div>{content.description}</div>
       </motion.div>
       <Folder className="folder backside" />
     </motion.div>
