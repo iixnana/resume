@@ -3,17 +3,18 @@ import { ResumeLogo } from "../../components/ResumeLogo/ResumeLogo";
 import { useRef } from "react";
 import type { Project } from "../../../types/project";
 import GithubLogo from "/github-mark.svg";
+import "./StartSection.css";
 
 interface HeaderSectionProps {
   project: Project;
 }
 
-export const HeaderSection = ({ project }: HeaderSectionProps) => {
+export const StartSection = ({ project }: HeaderSectionProps) => {
   const constraintsRef = useRef(null);
 
   return (
     <>
-      <section id="welcome" className="welcome-section">
+      <section id="start-section" className="welcome-section">
         <div className="welcome-box" ref={constraintsRef}>
           <div className="welcome-box-inner">
             <ResumeLogo constraintsRef={constraintsRef} />
@@ -21,8 +22,8 @@ export const HeaderSection = ({ project }: HeaderSectionProps) => {
             <div>＼（＾▽＾）／</div>
             <p className="welcome-description">
               Thank you for visiting my website. It took quite a while to build,
-              therefore each visitor is greaty appreciated! This was built for
-              fun, therefore there are a few fun features.
+              thus each visitor is greatly appreciated! This was built for fun,
+              so you should anticipate a couple of fun features.
               <br />
               <b>First tip:</b> Try moving the logo.
               <br />

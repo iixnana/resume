@@ -1,0 +1,18 @@
+.end-section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    gap: 3rem;
+    font-size: 0.8rem;
+}
+
+
+@media (max-width: 600px) {
+    .end-section {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
