@@ -12,5 +12,5 @@ export interface Resume {
   experience: Experience[];
   skills: Skills[];
   languages: Language[];
-  github: Project;
+  project: Project;
 }

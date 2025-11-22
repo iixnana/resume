@@ -23,8 +23,6 @@
   --theme-toggle-border: #f15391;
 
   --container-size: 1280px;
-  --folder-size:
-
 }
 
 :root.dark {
@@ -39,6 +37,7 @@
   --theme-toggle-background: #000;
   --theme-toggle-border: #f15391;
 }
+
 
 #root {
   max-width: var(--container-size);
