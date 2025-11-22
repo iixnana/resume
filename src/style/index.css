@@ -37,7 +37,7 @@ button {
 }
 
 button:hover {
-  border-color: var(--primary-color);
+  border-color: var(--accent-color);
 }
 
 button:focus {
@@ -45,7 +45,7 @@ button:focus {
 }
 
 button:focus-visible {
-  outline: 4px auto var(--primary-color);
+  outline: 4px auto var(--accent-color);
   outline-offset: 2px;
   box-shadow: none;
 }
