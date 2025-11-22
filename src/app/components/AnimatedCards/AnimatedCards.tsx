@@ -1,8 +1,9 @@
 import { Card } from "./Card";
 import "./AnimatedCards.css";
+import type { Experience } from "../../../types/experience";
 
 interface AnimatedCardsProps {
-  cardContent: string[];
+  cardContent: Experience[];
 }
 
 export const AnimatedCards = ({ cardContent }: AnimatedCardsProps) => {
