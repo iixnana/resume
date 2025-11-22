@@ -41,9 +41,3 @@
   --theme-toggle-background: #000;
   --theme-toggle-border: #f15391;
 }
-
-
-#root {
-  max-width: var(--container-size);
-  margin: 0 auto;
-}
