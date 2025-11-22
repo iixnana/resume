@@ -1,27 +1,27 @@
 // ======================================================
-// Starfield background (SCSS)
+// Comet background (SCSS)
 // ------------------------------------------------------
 // Expected HTML:
-// <div id="star-bg">
-//   <div className="stars-small"></div>
-//   <div className="stars-medium"></div>
-//   <div className="stars-big"></div>
+// <div id="comet-bg">
+//   <div className="comets-small"></div>
+//   <div className="comets-medium"></div>
+//   <div className="comets-big"></div>
 // </div>
 // ======================================================
 
 // How tall the starfield animation loop is.
 // Increase if you have very long pages.
-$star-max-offset: 100;
-$star-loop-distance: 100vh;
+$comet-max-offset: 100;
+$comet-loop-distance: 100vh;
 
-// Generate N random box-shadows inside 0..$star-max-offset px
-@function multiple-box-shadow($n, $max-offset: $star-max-offset) {
+// Generate N random box-shadows inside 0..$comet-max-offset px
+@function multiple-box-shadow($n, $max-offset: $comet-max-offset) {
   $shadows: ();
 
   @for $i from 1 through $n {
     $shadows: append(
       $shadows,
-      #{random($max-offset)}vh #{random($max-offset)}vh #fff,
+      #{random($max-offset)}vh #{random($max-offset)}vh var(--secondary-color),
       comma
     );
   }
@@ -29,25 +29,24 @@ $star-loop-distance: 100vh;
   @return $shadows;
 }
 
-// Densities for three star layers
+// Densities for three comet layers
 $shadows-small:  multiple-box-shadow(350);
 $shadows-medium: multiple-box-shadow(100);
 $shadows-big:    multiple-box-shadow(50);
 
-#star-bg {
+#comet-bg {
   position: absolute;
   top: 0;
   left: 0;
   width: 1px;
   height: 1px;
-  z-index: 1;
+  z-index: 0;
   pointer-events: none;
-  background-color: var(--background-color);
 }
 
-.stars-small,
-.stars-medium,
-.stars-big {
+.comets-small,
+.comets-medium,
+.comets-big {
   position: absolute;
   top: 0;
   left: 0;
@@ -58,12 +57,12 @@ $shadows-big:    multiple-box-shadow(50);
     content: "";
     position: absolute;
     left: 0;
-    top: $star-loop-distance;
+    top: $comet-loop-distance;
     border-radius: inherit;
   }
 }
 
-.stars-small {
+.comets-small {
   width: 1px;
   height: 1px;
   box-shadow: $shadows-small;
@@ -76,7 +75,7 @@ $shadows-big:    multiple-box-shadow(50);
   }
 }
 
-.stars-medium {
+.comets-medium {
   width: 2px;
   height: 2px;
   box-shadow: $shadows-medium;
@@ -89,7 +88,7 @@ $shadows-big:    multiple-box-shadow(50);
   }
 }
 
-.stars-big {
+.comets-big {
   width: 3px;
   height: 3px;
   box-shadow: $shadows-big;
@@ -103,13 +102,13 @@ $shadows-big:    multiple-box-shadow(50);
 }
 
 // ------------------------------------------------------
-// Animation: move stars upward by one loop distance
+// Animation: move comets upward by one loop distance
 // ------------------------------------------------------
 @keyframes animStar {
   from {
     transform: translateY(0);
   }
   to {
-    transform: translateY(-$star-loop-distance);
+    transform: translateY(-$comet-loop-distance);
   }
 }
