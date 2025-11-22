@@ -8,7 +8,7 @@ import type { Skills } from "./skills";
 export interface Resume {
   info: Info;
   aboutMe: string;
-  education: Education[];
+  education: Education;
   experience: Experience[];
   skills: Skills[];
   languages: Language[];

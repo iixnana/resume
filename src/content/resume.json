@@ -10,14 +10,12 @@
     }
   },
   "aboutMe": "I am an ambitious and creative engineer who enjoys building tools from scratch and solving complex problems. I actively share ideas that often shape team decisions. I care deeply about people’s experience with software, focusing on clean, well-tested, and intuitive solutions. I also aspire to mentor others and inspire women in STEM.",
-  "education": [
-    {
-      "title": "Bachelor degree in Software Systems",
-      "place": "Kaunas University of Technology",
-      "timespan": "SEP 2016 - JUN 2020",
-      "description": "A total of 243 ECTS credits and graduated with a top grade in final thesis on route planning and optimization. Study exchange in top South Korean universities in 2018."
-    }
-  ],
+  "education": {
+    "title": "Bachelor degree in Software Systems",
+    "place": "Kaunas University of Technology",
+    "timespan": "SEP 2016 - JUN 2020",
+    "description": "A total of 243 ECTS credits and graduated with a top grade in final thesis on route planning and optimization. Study exchange in top South Korean universities in 2018."
+  },
   "experience": [
     {
       "title": "Software Engineer",
