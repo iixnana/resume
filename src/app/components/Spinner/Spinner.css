@@ -9,11 +9,11 @@
 
 @keyframes animloader {
     0% {
-        box-shadow: -72px 0 var(--primary-color) inset;
+        box-shadow: -72px 0 var(--accent-color) inset;
     }
 
     100% {
-        box-shadow: 48px 0 var(--primary-color) inset;
+        box-shadow: 48px 0 var(--accent-color) inset;
     }
 }
 

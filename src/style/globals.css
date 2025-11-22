@@ -16,13 +16,13 @@
   --card-background-color: #FFF5E5;
   --folder-background-color: #ffe190;
   --button-background-color: #FFE9CC;
-  --primary-color: #f15391;
-  --secondary-color: #AE8997;
+  --accent-color: #f15391;
   --text-color: #201F1E;
   --link-color: #E21266;
   --link-hover-color: #A30F4A;
   --theme-toggle-background: #FFF;
   --theme-toggle-border: #f15391;
+  --progress-bar-color: #A57B2C;
 
   --container-size: 1280px;
 }
@@ -40,4 +40,5 @@
   --button-background-color: #786E68;
   --theme-toggle-background: #000;
   --theme-toggle-border: #f15391;
+  --progress-bar-color: #A57B2C;
 }

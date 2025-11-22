@@ -1,9 +1,9 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import { NavigationRoute } from "./routes";
-import { Home } from "../app/pages/Home/Home";
 import { Contact } from "../app/pages/ContactMe/Contact";
 import App from "../app/App";
 import { NotFound } from "../app/pages/Error/NotFound";
+import { Resume } from "../app/pages/Resume/Resume.page";
 
 export const router = createBrowserRouter([
   {
@@ -12,7 +12,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />,
+        element: <Resume />,
       },
       {
         path: NavigationRoute.Contact,

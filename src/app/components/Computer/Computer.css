@@ -3,7 +3,7 @@
     --dark-gray: #55524e;
     --gray: #9b9484;
     --dark-blue: #2b293e;
-    --light-blue: var(--primary-color);
+    --light-blue: var(--accent-color);
 }
 
 #computer {
