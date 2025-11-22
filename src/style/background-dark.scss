@@ -1,0 +1,114 @@
+// ======================================================
+// Starfield background (SCSS)
+// ------------------------------------------------------
+// Expected HTML:
+// <div id="star-bg">
+//   <div class="stars-small"></div>
+//   <div class="stars-medium"></div>
+//   <div class="stars-big"></div>
+// </div>
+// ======================================================
+
+// How tall the starfield animation loop is.
+// Increase if you have very long pages.
+$star-max-offset: 100;
+$star-loop-distance: 100vh;
+
+// Generate N random box-shadows inside 0..$star-max-offset px
+@function multiple-box-shadow($n, $max-offset: $star-max-offset) {
+  $shadows: ();
+
+  @for $i from 1 through $n {
+    $shadows: append(
+      $shadows,
+      #{random($max-offset)}vh #{random($max-offset)}vh #fff,
+      comma
+    );
+  }
+
+  @return $shadows;
+}
+
+// Densities for three star layers
+$shadows-small:  multiple-box-shadow(350);
+$shadows-medium: multiple-box-shadow(100);
+$shadows-big:    multiple-box-shadow(50);
+
+#star-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.stars-small,
+.stars-medium,
+.stars-big {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+  border-radius: 50%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: $star-loop-distance;
+    border-radius: inherit;
+  }
+}
+
+.stars-small {
+  width: 1px;
+  height: 1px;
+  box-shadow: $shadows-small;
+  animation: animStar 50s linear infinite;
+
+  &::after {
+    width: 1px;
+    height: 1px;
+    box-shadow: $shadows-small;
+  }
+}
+
+.stars-medium {
+  width: 2px;
+  height: 2px;
+  box-shadow: $shadows-medium;
+  animation: animStar 100s linear infinite;
+
+  &::after {
+    width: 2px;
+    height: 2px;
+    box-shadow: $shadows-medium;
+  }
+}
+
+.stars-big {
+  width: 3px;
+  height: 3px;
+  box-shadow: $shadows-big;
+  animation: animStar 150s linear infinite;
+
+  &::after {
+    width: 3px;
+    height: 3px;
+    box-shadow: $shadows-big;
+  }
+}
+
+// ------------------------------------------------------
+// Animation: move stars upward by one loop distance
+// ------------------------------------------------------
+@keyframes animStar {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-$star-loop-distance);
+  }
+}
