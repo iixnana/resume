@@ -1,15 +1,15 @@
 {
   "info": {
-    "full.name": "Kamile Nanartonyte",
-    "first.name": "Kamile",
-    "last.name": "Nanartonyte",
+    "fullName": "Kamile Nanartonyte",
+    "firstName": "Kamile",
+    "lastName": "Nanartonyte",
     "location": "Oslo, Norway",
     "contact": {
       "email": "me@kamile.tech",
       "linkedin": "https://www.linkedin.com/in/kamile-nanartonyte"
     }
   },
-  "about.me": "I am an ambitious and creative engineer who enjoys building tools from scratch and solving complex problems. I actively share ideas that often shape team decisions. I care deeply about people’s experience with software, focusing on clean, well-tested, and intuitive solutions. I also aspire to mentor others and inspire women in STEM.",
+  "aboutMe": "I am an ambitious and creative engineer who enjoys building tools from scratch and solving complex problems. I actively share ideas that often shape team decisions. I care deeply about people’s experience with software, focusing on clean, well-tested, and intuitive solutions. I also aspire to mentor others and inspire women in STEM.",
   "education": [
     {
       "title": "Bachelor degree in Software Systems",
