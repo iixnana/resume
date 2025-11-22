@@ -21,7 +21,7 @@ $star-loop-distance: 100vh;
   @for $i from 1 through $n {
     $shadows: append(
       $shadows,
-      #{random($max-offset)}vh #{random($max-offset)}vh #fff,
+      #{random($max-offset)}vh #{random($max-offset)}vh var(--background-secondary-color),
       comma
     );
   }
@@ -107,9 +107,9 @@ $shadows-big:    multiple-box-shadow(50);
 // ------------------------------------------------------
 @keyframes animStar {
   from {
-    transform: translateY(0);
+    transform: translateY(-$star-loop-distance);
   }
   to {
-    transform: translateY(-$star-loop-distance);
+    transform: translateY(0);
   }
 }
