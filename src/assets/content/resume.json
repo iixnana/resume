@@ -1,0 +1,124 @@
+{
+  "info": {
+    "fullName": "Kamile Nanartonyte",
+    "firstName": "Kamile",
+    "lastName": "Nanartonyte",
+    "location": "Oslo, Norway",
+    "contact": {
+      "email": "me@kamile.tech",
+      "linkedin": "https://www.linkedin.com/in/kamile-nanartonyte"
+    }
+  },
+  "aboutMe": "I am an ambitious and creative engineer who enjoys building tools from scratch and solving complex problems. I actively share ideas that often shape team decisions. I care deeply about people’s experience with software, focusing on clean, well-tested, and intuitive solutions. I also aspire to mentor others and inspire women in STEM.",
+  "education": {
+    "title": "Bachelor degree in Software Systems",
+    "place": "Kaunas University of Technology",
+    "timespan": "SEP 2016 - JUN 2020",
+    "description": "A total of 243 ECTS credits and graduated with a top grade in final thesis on route planning and optimization. Study exchange in top South Korean universities in 2018."
+  },
+  "experience": [
+    {
+      "title": "Software Engineer",
+      "place": "Distribution Innovation",
+      "timespan": "DEC 2023 - NOW",
+      "languages": "Java, Typescript",
+      "description": "Developing and maintaining eCommerce package system features using Java and React. Took ownership of frontend development within the team, setting standards and applying modern best practices to improve speed and reliability. Rebuilt the entire frontend from scratch with a new design system and full test coverage. Implemented code style standardization with Checkstyle, ESLint, Prettier, and GitHub Actions to ensure consistency and reduce review load. Automated frontend API integrations using OpenAPI and custom Mustache templates, and mastered testing with Playwright, Ladle, and Vitest."
+    },
+    {
+      "title": "Software Engineer",
+      "place": "Oda",
+      "timespan": "JAN 2022 - NOV 2023",
+      "languages": "Python, Typescript",
+      "description": "Delivery capacity and route planning tools, which is one of the core areas of the product. Focusing on clean, simple and well-tested code. Have made a huge impact on all projects I have contributed to, from ideas and architecture to delivering excellent technical solutions."
+    },
+    {
+      "title": "Software Engineer",
+      "place": "Neonomics",
+      "timespan": "AUG 2020 - DEC 2021",
+      "languages": "Java",
+      "description": "Banks integration into the platform and maintenance of existing implementations, testing internally and externally and adding new features. Initiative and implementation of the team's coding standards."
+    },
+    {
+      "title": "Software Engineer",
+      "place": "Satalia",
+      "timespan": "JAN 2020 - APR 2020",
+      "languages": "Python",
+      "description": "One of the main developers working on creating a new benchmarking system. Working on data analysis for a client. Skilling up in programming languages and teamwork."
+    },
+    {
+      "title": "Software Engineering Intern",
+      "place": "Satalia",
+      "timespan": "OCT 2019 - DEC 2019",
+      "languages": "Python",
+      "description": "Comparison of two systems, getting familiar with the main product and skilling up in programming languages."
+    },
+    {
+      "title": "IT Project Manager",
+      "place": "Lithuanian Railways",
+      "timespan": "JUL 2019 - AUG 2019",
+      "languages": null,
+      "description": "Managing a real project from scratch. Time & tasks planning, communication with business units, preparing initiation as well as technical and functional requirements documents."
+    },
+    {
+      "title": "OOP Tutor",
+      "place": "Kaunas University of Technology",
+      "timespan": "FEB 2019 - JAN 2020",
+      "languages": "C#, C++",
+      "description": "Helping students to understand programming concepts, explaining theory of object-oriented programming."
+    }
+  ],
+  "skills": [
+    {
+      "title": "Languages & Frameworks",
+      "skills": [
+        "Typescript (React)",
+        "Java (Spring, Spark)",
+        "Python (Django)",
+        "C#"
+      ]
+    },
+    {
+      "title": "Tools & Technologies",
+      "skills": [
+        "Playwright",
+        "Ladle",
+        "Vitest",
+        "Checkstyle",
+        "ESLint",
+        "Prettier",
+        "GitHub Actions",
+        "OpenAPI",
+        "Mustache templates"
+      ]
+    },
+    {
+      "title": "Soft Skills",
+      "skills": [
+        "Collaboration & Leadership",
+        "Mentorship",
+        "Analytical Thinking",
+        "Research & Problem Solving",
+        "Open-mindedness",
+        "Independence"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Norwegian",
+      "level": "B1"
+    },
+    {
+      "language": "English",
+      "level": "C1"
+    },
+    {
+      "language": "Lithuanian",
+      "level": "Native"
+    }
+  ],
+  "project": {
+    "repo": "https://github.com/iixnana/resume",
+    "issues": "https://github.com/iixnana/resume/issues"
+  }
+}
