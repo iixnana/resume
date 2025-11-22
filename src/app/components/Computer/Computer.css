@@ -3,19 +3,17 @@
     --dark-gray: #55524e;
     --gray: #9b9484;
     --dark-blue: #2b293e;
-    --light-blue: #35b7da;
-}
-
-body {
-    background-color: #fef9ee;
+    --light-blue: var(--primary-color);
 }
 
 #computer {
+    z-index: -1;
     position: absolute;
     width: 340px;
     height: 300px;
     bottom: 0;
     left: 5%;
+    transform-origin: bottom left;
 
     background:
 
@@ -153,5 +151,29 @@ body {
             0 -20px 0 var(--light-blue),
             0 -10px var(--light-blue),
             0 10px 0 var(--light-blue);
+    }
+}
+
+@media (max-width: 1660px) {
+    #computer {
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 1330px) {
+    #computer {
+        transform: scale(0.5);
+    }
+}
+
+@media (max-width: 600px) and (min-height: 800px) {
+    #computer {
+        transform: scale(0.4);
+    }
+}
+
+@media (max-width: 600px) and (max-height: 799px) {
+    #computer {
+        display: none;
     }
 }

@@ -18,31 +18,49 @@
 .welcome-section {
     height: 100vh;
     width: 100%;
+    min-width: 320px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 0 100px;
-}
-
-.welcome-h2 {
-    font-weight: 800;
-    font-family: "BoldPixels";
-    font-size: 6rem;
+    margin-bottom: 100px;
 }
 
 .welcome-box {
     width: 50vw;
     background-color: #e8e8e8;
     border: 10px solid #000;
+    min-width: 320px;
 }
 
 .welcome-box-inner {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    min-height: 200px;
     margin: 10px;
+    padding: 30px;
     background-color: var(--welcome-card-background-color);
+
+    gap: 15px;
+
+    p {
+        margin: 0;
+    }
+}
+
+.welcome-h2 {
+    text-align: center;
+    font-weight: 800;
+    font-family: "BoldPixels";
+    font-size: 6rem;
+    line-height: 6rem;
+    margin: 0;
+}
+
+
+.welcome-description {
+    text-align: center;
 }
 
 .table {
@@ -50,7 +68,7 @@
     position: absolute;
     left: 0;
     width: 100%;
-    height: 80px;
+    height: 60px;
     background-color: #5c1d00;
     display: flex;
     align-items: center;
@@ -59,6 +77,116 @@
 
 .table-inner {
     width: 100%;
-    height: 60px;
+    height: 40px;
     background-color: #6a3100;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    gap: 6rem;
+    font-size: 0.8rem;
+}
+
+.git {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 0.8rem;
+}
+
+.git-link {
+    width: 120px;
+}
+
+.git-link:first-child {
+    text-align: right;
+}
+
+.git-link:last-child {
+    text-align: left;
+}
+
+.git-logo {
+    width: 20px;
+}
+
+.author {
+    font-size: 0.8rem;
+}
+
+.download-button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    color: var(--text-color);
+    background-color: var(--button-background-color);
+    cursor: pointer;
+    transition: border-color 0.25s;
+
+
+    &:hover {
+        border-color: var(--primary-color);
+        color: var(--text-color);
+    }
+
+    &:focus {
+        outline: none;
+        color: var(--text-color);
+    }
+
+    &:focus-visible {
+        outline: 4px auto var(--primary-color);
+        outline-offset: 2px;
+        box-shadow: none;
+        color: var(--text-color);
+    }
+}
+
+@media (max-width: 1280px) {
+    .welcome-box {
+        width: 70vw;
+
+    }
+}
+
+@media (max-width: 1024px) {
+    .welcome-box {
+        width: 80vw;
+
+    }
+}
+
+
+
+@media (max-width: 600px) {
+    .welcome-box {
+        width: 90vw;
+
+    }
+}
+
+@media (max-width: 600px) and (max-height: 799px) {
+    .welcome-section {
+        height: fit-content;
+    }
+
+    .welcome-box {
+        height: fit-content;
+    }
+
+    .table {
+        display: none;
+    }
+}
+
+.logo {
+    height: 60px;
 }

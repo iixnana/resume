@@ -8,10 +8,14 @@ a:hover {
   color: var(--link-hover-color);
 }
 
+html {
+  margin: 0;
+}
+
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  padding: 0;
+
   min-width: 320px;
   min-height: 100vh;
   cursor: url('/cursor.svg'), url('/cursor.png'), url('/cursor.cur'), auto;
