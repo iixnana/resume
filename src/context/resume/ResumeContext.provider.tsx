@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState, type ReactNode } from "react";
 import { ResumeContext } from "./ResumeContext";
 import type { ResumeContextProps, ResumeState } from "./ResumeContext.types";
-import resumeJson from "../../content/resume.json";
+import resumeJson from "../../assets/content/resume.json";
 import type { Language, Level } from "../../types/language";
 
 export const ResumeProvider = ({ children }: { children: ReactNode }) => {

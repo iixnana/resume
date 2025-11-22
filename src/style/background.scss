@@ -21,7 +21,7 @@ $star-loop-distance: 100vh;
   @for $i from 1 through $n {
     $shadows: append(
       $shadows,
-      #{random($max-offset)}vh #{random($max-offset)}vh var(--background-secondary-color),
+      #{random($max-offset)}vw #{random($max-offset)}vh var(--background-secondary-color),
       comma
     );
   }
@@ -40,9 +40,8 @@ $shadows-big:    multiple-box-shadow(50);
   left: 0;
   width: 1px;
   height: 1px;
-  z-index: 1;
+  z-index: -1;
   pointer-events: none;
-  background-color: var(--background-color);
 }
 
 .stars-small,
@@ -52,7 +51,6 @@ $shadows-big:    multiple-box-shadow(50);
   top: 0;
   left: 0;
   background: transparent;
-  border-radius: 50%;
 
   &::after {
     content: "";

@@ -1,7 +1,6 @@
 import type { PropsWithChildren } from "react";
 import { ThemeToggle } from "../components/ThemeToggle/ThemeToggle";
 import "./PageLayout.css";
-import "../../style/background.scss";
 
 export function PageLayout({ children }: PropsWithChildren) {
   return (
