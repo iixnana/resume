@@ -1,5 +1,14 @@
+import { classNames } from "../../../utils/classnames";
 import "./Spinner.css";
 
-export const Spinner = () => {
-  return <span className="spinner" />;
+interface SpinnerProps {
+  isFullPage?: boolean;
+}
+
+export const Spinner = ({ isFullPage }: SpinnerProps) => {
+  return (
+    <div className={classNames(isFullPage && "full-page")}>
+      <span className="spinner" />
+    </div>
+  );
 };

@@ -14,7 +14,7 @@ export const Home = () => {
   const constraintsRef = useRef(null);
 
   if (isLoading || resume === null) {
-    return <Spinner />;
+    return <Spinner isFullPage={true} />;
   }
 
   return (
