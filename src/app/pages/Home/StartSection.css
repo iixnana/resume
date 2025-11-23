@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 100px;
+
 }
 
 .welcome-box {
@@ -13,6 +14,7 @@
     background-color: #e8e8e8;
     border: 10px solid #000;
     min-width: 320px;
+    box-sizing: border-box;
 }
 
 .welcome-box-inner {
@@ -24,6 +26,7 @@
     margin: 10px;
     padding: 30px;
     background-color: var(--welcome-card-background-color);
+    box-sizing: border-box;
 
     gap: 15px;
 
@@ -52,7 +55,7 @@
     left: 0;
     width: 100%;
     height: 60px;
-    background-color: #5c1d00;
+    background-color: var(--table-outer-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,7 +64,7 @@
 .table-inner {
     width: 100%;
     height: 40px;
-    background-color: #6a3100;
+    background-color: var(--table-inner-color);
 }
 
 

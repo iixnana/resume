@@ -1,0 +1,18 @@
+.scroll-to-top {
+    bottom: var(--spacing-xsmall);
+    right: var(--spacing-xsmall);
+
+    opacity: 0;
+    transform: translateY(12px);
+    pointer-events: none;
+
+    transition:
+        opacity 0.25s ease-out,
+        transform 0.25s ease-out;
+}
+
+.scroll-to-top--visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}

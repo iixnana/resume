@@ -11,7 +11,7 @@
   -moz-osx-font-smoothing: grayscale;
 
   --background-color: #FFFEFA;
-  --background-secondary-color: #AE8997;
+  --background-secondary-color: rgb(241, 83, 145, 0.3);
   --welcome-card-background-color: #FFFFFF;
   --card-background-color: #FFF5E5;
   --folder-color: #ffe190;
@@ -26,24 +26,27 @@
   --theme-toggle-border: #f15391;
   --progress-bar-color: #A57B2C;
 
-  --card-width: min(64rem, 90vw);
-  --card-height: 60vh;
-  --folder-width: calc(var(--card-width) * 1.05);
-  --card-drop-distance: 45vh;
-  --stack-location: 10vh;
-  --folder-location: 10vh;
-  --card-drop-distance: 83vh;
+  --table-outer-color: #4d3a2a;
+  --table-inner-color: #684d35;
+
+  --border-radius: 1rem;
+  --spacing-xsmall: 1rem;
+  --spacing-small: 1.5rem;
+  --spacing-medium: 2rem;
+  --spacing-large: 3rem;
+
+  --border-color: #201F1E;
 }
 
 :root.dark {
   /* Dark theme overrides */
   --text-color: #FFE9C7;
   --background-color: #201F1E;
-  --background-secondary-color: #FFFEFA;
+  --background-secondary-color: rgb(255, 254, 250, 0.3);
   --welcome-card-background-color: #201F1E;
   --card-background-color: #403C3A;
-  --folder-color: #ffe190;
-  --folder-backside-color: #d0bb81;
+  --folder-color: #e3c97f;
+  --folder-backside-color: #887540;
   --link-color: #F9A1CE;
   --link-hover-color: #FBD0E6;
   --button-background-color: #786E68;
@@ -51,22 +54,9 @@
   --theme-toggle-border: #f15391;
   --progress-bar-color: #A57B2C;
   --secondary-accent-color: #FFFEFA;
-}
 
-@media (max-width: 1280px) or (max-height: 1000px) {
-  :root {
-    --card-height: 80vh;
-    --stack-location: 2vh;
-    --folder-location: 15vh;
-    --card-drop-distance: 88vh;
-  }
-}
+  --table-outer-color: #322417;
+  --table-inner-color: #573c2b;
 
-@media (max-width: 900px) and (max-height: 600px) {
-  :root {
-    --card-height: 80vh;
-    --stack-location: 2vh;
-    --folder-location: 15vh;
-    --card-drop-distance: 88vh;
-  }
+  --border-color: #FFFEFA;
 }

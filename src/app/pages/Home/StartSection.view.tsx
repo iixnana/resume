@@ -18,12 +18,12 @@ export const StartSection = ({ project }: HeaderSectionProps) => {
         <div className="welcome-box" ref={constraintsRef}>
           <div className="welcome-box-inner">
             <ResumeLogo constraintsRef={constraintsRef} />
-            <h2 className="welcome-h2">Hello, world!</h2>
+            <h2 className="welcome-h2">Hello, World!</h2>
             <div>＼（＾▽＾）／</div>
             <p className="welcome-description">
               Thank you for visiting my website. It took quite a while to build,
               thus each visitor is greatly appreciated! This was built for fun,
-              so you should anticipate a couple of fun features.
+              so you should anticipate a couple of fun features built-in.
               <br />
               <b>First tip:</b> Try moving the logo.
               <br />
