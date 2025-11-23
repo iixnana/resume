@@ -1,50 +1,50 @@
 // ======================================================
-// Starfield background (SCSS)
-// ------------------------------------------------------
 // Expected HTML:
-// <div id="star-bg">
-//   <div className="stars-small"></div>
-//   <div className="stars-medium"></div>
-//   <div className="stars-big"></div>
+// <div id="pixel-bg">
+//   <div className="pixels-small"></div>
+//   <div className="pixels-medium"></div>
+//   <div className="pixels-big"></div>
 // </div>
 // ======================================================
 
-$star-max-offset: 100;
-$star-loop-distance: 100vh;
+// New: use Sass modules
+@use "sass:math";
+@use "sass:list";
 
-// Generate N random box-shadows inside 0..$star-max-offset px
-@function multiple-box-shadow($n, $max-offset: $star-max-offset) {
+$pixel-max-offset: 100;
+$pixel-loop-distance: 100vh;
+
+@function multiple-box-shadow($n, $max-offset: $pixel-max-offset) {
   $shadows: ();
 
   @for $i from 1 through $n {
-    $shadows: append(
+    $shadows: list.append(
       $shadows,
-      #{random($max-offset)}vw #{random($max-offset)}vh var(--background-secondary-color),
-      comma
+      #{math.random($max-offset)}vw #{math.random($max-offset)}vh var(--background-secondary-color),
+      $separator: comma
     );
   }
 
   @return $shadows;
 }
 
-// Densities for three star layers
 $shadows-small:  multiple-box-shadow(700);
 $shadows-medium: multiple-box-shadow(200);
 $shadows-big:    multiple-box-shadow(100);
 
-#star-bg {
-  position: fixed;       // 👈 key change: fixed, not absolute
-  inset: 0;              // top:0; right:0; bottom:0; left:0;
+#pixel-bg {
+  position: fixed;
+  inset: 0; 
   width: 100%;
   height: 100%;
-  z-index: -1;           // behind all content
+  z-index: -1;
   pointer-events: none;
-  overflow: hidden;      // hide stars that drift outside
+  overflow: hidden;
 }
 
-.stars-small,
-.stars-medium,
-.stars-big {
+.pixels-small,
+.pixels-medium,
+.pixels-big {
   position: absolute;
   top: 0;
   left: 0;
@@ -54,16 +54,16 @@ $shadows-big:    multiple-box-shadow(100);
     content: "";
     position: absolute;
     left: 0;
-    top: $star-loop-distance;
+    top: $pixel-loop-distance;
     border-radius: inherit;
   }
 }
 
-.stars-small {
+.pixels-small {
   width: 3px;
   height: 3px;
   box-shadow: $shadows-small;
-  animation: animStarDown 50s linear infinite;
+  animation: animpixelDown 50s linear infinite;
 
   &::after {
     width: 3px;
@@ -72,11 +72,11 @@ $shadows-big:    multiple-box-shadow(100);
   }
 }
 
-.stars-medium {
+.pixels-medium {
   width: 6px;
   height: 6px;
   box-shadow: $shadows-medium;
-  animation: animStarUp 100s linear infinite;
+  animation: animpixelUp 100s linear infinite;
 
   &::after {
     width: 6px;
@@ -85,11 +85,11 @@ $shadows-big:    multiple-box-shadow(100);
   }
 }
 
-.stars-big {
+.pixels-big {
   width: 9px;
   height: 9px;
   box-shadow: $shadows-big;
-  animation: animStarDown 150s linear infinite;
+  animation: animpixelDown 150s linear infinite;
 
   &::after {
     width: 9px;
@@ -98,21 +98,50 @@ $shadows-big:    multiple-box-shadow(100);
   }
 }
 
-@keyframes animStarDown {
+@keyframes animpixelDown {
   from {
-    transform: translateY(-$star-loop-distance);
+    transform: translateY(-$pixel-loop-distance);
   }
   to {
     transform: translateY(0);
   }
 }
 
-@keyframes animStarUp {
+@keyframes animpixelUp {
   from {
     transform: translateY(0);
   }
   to {
-    transform: translateY(-$star-loop-distance);
+    transform: translateY(-$pixel-loop-distance);
   }
 }
 
+@media (max-width: 768px) {
+  $shadows-small:  multiple-box-shadow(300);
+  $shadows-medium: multiple-box-shadow(100);
+  $shadows-big:    multiple-box-shadow(50);
+
+  .pixels-small {
+    box-shadow: $shadows-small;
+
+    &::after {
+      box-shadow: $shadows-small;
+    }
+  }
+
+  .pixels-medium {
+    box-shadow: $shadows-medium;
+
+    &::after {
+      box-shadow: $shadows-medium;
+    }
+  }
+
+  .pixels-big {
+    box-shadow: $shadows-big;
+
+    &::after {
+      box-shadow: $shadows-big;
+    }
+  }
+}

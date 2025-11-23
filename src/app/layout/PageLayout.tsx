@@ -5,10 +5,10 @@ import "./PageLayout.css";
 export function PageLayout({ children }: PropsWithChildren) {
   return (
     <main>
-      <div id="star-bg">
-        <div className="stars-small" />
-        <div className="stars-medium" />
-        <div className="stars-big" />
+      <div id="pixel-bg">
+        <div className="pixels-small" />
+        <div className="pixels-medium" />
+        <div className="pixels-big" />
       </div>
       <h1 className="screen-reader-only">Resume of Kamile Nanartonyte</h1>
       <ThemeToggle />
