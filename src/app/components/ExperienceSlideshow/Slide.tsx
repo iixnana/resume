@@ -1,7 +1,8 @@
-import { type Ref } from "react";
+import { useEffect, useRef, useState, type Ref } from "react";
 import { motion, usePresenceData } from "motion/react";
 import type { Experience } from "../../../types/experience";
 import "./Slide.css";
+import { classNames } from "../../../utils/classnames";
 
 interface SlideProps {
   experience: Experience;
@@ -10,6 +11,32 @@ interface SlideProps {
 
 export const Slide = ({ experience, ref }: SlideProps) => {
   const direction = usePresenceData();
+
+  const descRef = useRef<HTMLDivElement>(null);
+  const [isScrollable, setIsScrollable] = useState(false);
+
+  useEffect(() => {
+    const el = descRef.current;
+    if (!el) return;
+
+    const check = () => {
+      setIsScrollable(el.scrollHeight > el.clientHeight + 2);
+    };
+
+    check();
+
+    const resizeObserver = new ResizeObserver(check);
+    resizeObserver.observe(el);
+    return () => resizeObserver.disconnect();
+  }, [experience]);
+
+  const handleScroll = () => {
+    const el = descRef.current;
+    if (!el) return;
+
+    const atBottom = el.scrollTop + el.clientHeight >= el.scrollHeight - 2;
+    setIsScrollable(!atBottom);
+  };
 
   return (
     <motion.div
@@ -34,7 +61,14 @@ export const Slide = ({ experience, ref }: SlideProps) => {
         {experience.timespan}
         {experience.languages !== null && ` | ${experience.languages}`}
       </div>
-      <div className="responsive-margin description">
+      <div
+        ref={descRef}
+        onScroll={handleScroll}
+        className={classNames(
+          "responsive-margin description",
+          isScrollable && "scrollable"
+        )}
+      >
         {experience.description}
       </div>
     </motion.div>

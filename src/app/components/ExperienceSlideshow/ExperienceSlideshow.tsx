@@ -33,12 +33,12 @@ export const ExperienceSlideshow = ({ experiences }: ExperienceProps) => {
       <motion.button
         initial={false}
         aria-label="Previous"
-        className="slide-button"
+        className="slide-button left"
         onClick={() => setSlide(-1)}
         whileFocus={{ outline: `2px solid black` }}
         whileTap={{ scale: 0.9 }}
       >
-        <ArrowLeft className="slide-button-icon" /> {"<"}
+        <ArrowLeft className="slide-button-icon" />
       </motion.button>
 
       <AnimatePresence custom={direction} initial={false} mode="popLayout">
@@ -51,13 +51,12 @@ export const ExperienceSlideshow = ({ experiences }: ExperienceProps) => {
       <motion.button
         initial={false}
         aria-label="Next"
-        className="slide-button"
+        className="slide-button right"
         onClick={() => setSlide(1)}
         whileFocus={{ outline: `2px solid black` }}
         whileTap={{ scale: 0.9 }}
       >
         <ArrowRight className="slide-button-icon" />
-        {">"}
       </motion.button>
     </div>
   );

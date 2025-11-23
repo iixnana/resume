@@ -8,6 +8,12 @@
     box-sizing: border-box;
 }
 
+@media (max-width: 640px) {
+    .card {
+        padding: var(--spacing-xsmall);
+    }
+}
+
 .card--stacked {
     position: absolute;
     top: 0;
