@@ -14,9 +14,11 @@
   --background-secondary-color: #AE8997;
   --welcome-card-background-color: #FFFFFF;
   --card-background-color: #FFF5E5;
-  --folder-background-color: #ffe190;
+  --folder-color: #ffe190;
+  --folder-backside-color: #d0bb81;
   --button-background-color: #FFE9CC;
   --accent-color: #f15391;
+  --secondary-accent-color: #201F1E;
   --text-color: #201F1E;
   --link-color: #E21266;
   --link-hover-color: #A30F4A;
@@ -34,11 +36,13 @@
   --background-secondary-color: #FFFEFA;
   --welcome-card-background-color: #201F1E;
   --card-background-color: #403C3A;
-  --folder-background-color: #e3ab45;
+  --folder-color: #ffe190;
+  --folder-backside-color: #d0bb81;
   --link-color: #F9A1CE;
   --link-hover-color: #FBD0E6;
   --button-background-color: #786E68;
   --theme-toggle-background: #000;
   --theme-toggle-border: #f15391;
   --progress-bar-color: #A57B2C;
+  --secondary-accent-color: #FFFEFA;
 }

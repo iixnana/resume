@@ -4,6 +4,7 @@ import { Card } from "../../components/Card/Card";
 import { CardStack } from "../../components/CardStack/CardStack";
 import "./ResumeSection.css";
 import { useScroll } from "motion/react";
+import { FolderSVG } from "../../../svg/FolderSVG";
 
 interface ResumeSectionProps {
   resume: Resume;
@@ -18,7 +19,7 @@ export const ResumeSection = ({ resume }: ResumeSectionProps) => {
   });
 
   return (
-    <section id="resume-section" ref={sectionRef}>
+    <section id="resume-section" ref={sectionRef} className="resume-section">
       <CardStack scrollYProgress={scrollYProgress}>
         <Card id="information">
           <h2 className="screen-reader-only">Personal information</h2>

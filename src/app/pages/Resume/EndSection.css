@@ -4,6 +4,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin-top: 50vh;
     margin-bottom: 2rem;
     gap: 3rem;
     font-size: 0.8rem;

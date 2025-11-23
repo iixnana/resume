@@ -1,13 +1,11 @@
 .card {
     z-index: 1;
     overflow: hidden;
-    height: 500px;
-    width: 500px;
     background-color: var(--card-background-color);
-    border: 1px solid var(--accent-color);
     padding: 1.5rem;
-    box-shadow: 10px 10px;
     margin: 50px;
+    border-radius: 1rem;
+    border: 1px solid var(--secondary-accent-color);
 
     h2 {
         font-weight: 500;
