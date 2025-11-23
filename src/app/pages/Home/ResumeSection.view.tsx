@@ -62,11 +62,11 @@ export const ResumeSection = ({ resume }: ResumeSectionProps) => {
 
         <StackingCard>
           <h2 className="card-title text-xxl">Education</h2>
-          <div className="card-content--centered">
+          <div className="card-content--centered text-center">
             <div className="text-bold text-lg">{resume.education.title}</div>
             <div className="text-sm">{resume.education.place}</div>
             <div className="text-xxs">{resume.education.timespan}</div>
-            <div className="text-center responsive-margin">
+            <div className="responsive-margin">
               {resume.education.description}
             </div>
           </div>
