@@ -1,8 +1,6 @@
-interface LocationProps {
-  className: string;
-}
+import type { SVGProps } from "./types";
 
-export const LocationSVG = ({ className }: LocationProps) => {
+export const LocationSVG = ({ className }: SVGProps) => {
   return (
     <svg
       className={className}

@@ -8,6 +8,7 @@ import "./PixelFrame.css";
 import { SocialMediaButton } from "../../components/SocialMedia/SocialMediaButton";
 import { Icon } from "../../components/Icon/Icon";
 import { Pill } from "../../components/Pill/Pill";
+import { ExperienceSlideshow } from "../../components/ExperienceSlideshow/ExperienceSlideshow";
 
 interface ResumeSectionProps {
   resume: Resume;
@@ -74,17 +75,12 @@ export const ResumeSection = ({ resume }: ResumeSectionProps) => {
 
         <StackingCard>
           <h2 className="card-title text-xxl">Experience</h2>
-          {resume.experience.map((exp) => {
-            return (
-              <div key={exp.title + exp.place + exp.timespan}>
-                <div>{exp.title}</div>
-                <div>{exp.place}</div>
-                <div>{exp.timespan}</div>
-                <div>{exp.languages}</div>
-                <div>{exp.description}</div>
-              </div>
-            );
-          })}
+          <div className="card-content--centered">
+            <ExperienceSlideshow experiences={resume.experience} />
+            <span className="text-center exp-total">
+              <span className="text-bold">Total:</span> 6 years
+            </span>
+          </div>
         </StackingCard>
 
         <StackingCard>

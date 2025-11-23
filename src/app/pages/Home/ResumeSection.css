@@ -114,6 +114,10 @@
     gap: 6px;
 }
 
+.exp-total {
+    margin-top: 12px;
+}
+
 @media (max-width: 640px) {
     .personal-info--contact {
         flex-direction: column;
