@@ -37,7 +37,6 @@
 
 .personal-info--name {
     text-align: center;
-    font-weight: 800;
     font-family: "BoldPixels", system-ui, Avenir, Helvetica, Arial, sans-serif;
     font-size: clamp(2rem, 6vw, 4rem);
     line-height: clamp(1.5rem, 6vw, 4rem);
@@ -75,6 +74,19 @@
     justify-content: center;
 }
 
+.about-me {
+    margin: 0 7rem;
+    text-align: center;
+}
+
+.card-title {
+    text-align: center;
+    font-family: "BoldPixels", system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: clamp(2rem, 6vw, 3rem);
+    line-height: clamp(1.5rem, 6vw, 2.5rem);
+    margin-top: var(--spacing-xsmall);
+}
+
 @media (max-width: 640px) {
     .personal-info--contact {
         flex-direction: column;
@@ -88,5 +100,11 @@
 
     .personal-info--name {
         word-spacing: -5px;
+    }
+}
+
+@media (max-width: 1439px) {
+    .about-me {
+        margin: 0;
     }
 }

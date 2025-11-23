@@ -91,6 +91,14 @@
     }
 }
 
+
+@media (max-width: 640px) or (max-height: 640px) {
+    .table {
+        display: none;
+    }
+}
+
+
 @media (max-width: 600px) and (max-height: 799px) {
     .welcome-section {
         height: fit-content;
@@ -98,10 +106,6 @@
 
     .welcome-box {
         height: fit-content;
-    }
-
-    .table {
-        display: none;
     }
 }
 

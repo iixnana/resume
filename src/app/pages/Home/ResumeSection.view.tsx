@@ -54,11 +54,11 @@ export const ResumeSection = ({ resume }: ResumeSectionProps) => {
               {resume.info.location}
             </div>
           </div>
-          <div>{resume.aboutMe}</div>
+          <div className="about-me">{resume.aboutMe}</div>
         </StackingCard>
 
         <StackingCard>
-          <h2>Education</h2>
+          <h2 className="card-title">Education</h2>
           <div>{resume.education.title}</div>
           <div>{resume.education.place}</div>
           <div>{resume.education.timespan}</div>
@@ -66,7 +66,7 @@ export const ResumeSection = ({ resume }: ResumeSectionProps) => {
         </StackingCard>
 
         <StackingCard>
-          <h2>Experience</h2>
+          <h2 className="card-title">Experience</h2>
           {resume.experience.map((exp) => {
             return (
               <div key={exp.title + exp.place + exp.timespan}>
@@ -81,7 +81,7 @@ export const ResumeSection = ({ resume }: ResumeSectionProps) => {
         </StackingCard>
 
         <StackingCard>
-          <h2>Skills</h2>
+          <h2 className="card-title">Skills</h2>
           {resume.skills.map((skillset) => (
             <div key={skillset.title}>
               <div>{skillset.title}</div>
@@ -91,7 +91,7 @@ export const ResumeSection = ({ resume }: ResumeSectionProps) => {
         </StackingCard>
 
         <StackingCard>
-          <h2>Languages</h2>
+          <h2 className="card-title">Languages</h2>
           {resume.languages.map((lang) => (
             <div key={lang.language}>
               <div>{lang.language}</div>

@@ -154,26 +154,26 @@
     }
 }
 
-@media (max-width: 1660px) {
+@media (max-width: 640px) or (max-height: 640px) {
     #computer {
-        transform: scale(0.8);
+        display: none;
     }
 }
 
-@media (max-width: 1330px) {
-    #computer {
-        transform: scale(0.5);
-    }
-}
-
-@media (max-width: 600px) and (min-height: 800px) {
+@media (min-width: 640px) and (max-width: 1023px) {
     #computer {
         transform: scale(0.4);
     }
 }
 
-@media (max-width: 600px) or (max-height: 799px) {
+@media (min-width: 1024px) and (max-width: 1439px) {
     #computer {
-        display: none;
+        transform: scale(0.5);
+    }
+}
+
+@media (min-width: 1440px) and (max-height: 1000px) {
+    #computer {
+        transform: scale(0.6);
     }
 }
