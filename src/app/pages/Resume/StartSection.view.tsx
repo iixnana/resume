@@ -18,7 +18,7 @@ export const StartSection = ({ project }: HeaderSectionProps) => {
         <div className="welcome-box" ref={constraintsRef}>
           <div className="welcome-box-inner">
             <ResumeLogo constraintsRef={constraintsRef} />
-            <h2 className="welcome-h2">Hello, world!</h2>
+            <h2 className="welcome-h2">Hello, World!</h2>
             <div>＼（＾▽＾）／</div>
             <p className="welcome-description">
               Thank you for visiting my website. It took quite a while to build,
