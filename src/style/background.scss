@@ -1,4 +1,4 @@
-// ------------------------------------------------------
+// ======================================================
 // Expected HTML:
 // <div id="pixel-bg">
 //   <div className="pixels-small"></div>
@@ -7,37 +7,39 @@
 // </div>
 // ======================================================
 
+// New: use Sass modules
+@use "sass:math";
+@use "sass:list";
+
 $pixel-max-offset: 100;
 $pixel-loop-distance: 100vh;
 
-// Generate N random box-shadows inside 0..$pixel-max-offset px
 @function multiple-box-shadow($n, $max-offset: $pixel-max-offset) {
   $shadows: ();
 
   @for $i from 1 through $n {
-    $shadows: append(
+    $shadows: list.append(
       $shadows,
-      #{random($max-offset)}vw #{random($max-offset)}vh var(--background-secondary-color),
-      comma
+      #{math.random($max-offset)}vw #{math.random($max-offset)}vh var(--background-secondary-color),
+      $separator: comma
     );
   }
 
   @return $shadows;
 }
 
-// Densities for three pixel layers
 $shadows-small:  multiple-box-shadow(700);
 $shadows-medium: multiple-box-shadow(200);
 $shadows-big:    multiple-box-shadow(100);
 
 #pixel-bg {
-  position: fixed;       // 👈 key change: fixed, not absolute
-  inset: 0;              // top:0; right:0; bottom:0; left:0;
+  position: fixed;
+  inset: 0; 
   width: 100%;
   height: 100%;
-  z-index: -1;           // behind all content
+  z-index: -1;
   pointer-events: none;
-  overflow: hidden;      // hide pixels that drift outside
+  overflow: hidden;
 }
 
 .pixels-small,
