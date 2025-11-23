@@ -34,7 +34,9 @@ export const ResumeSection = ({ resume }: ResumeSectionProps) => {
               />
             </div>
           </div>
-          <div className="personal-info--name">{resume.info.fullName}</div>
+          <div className="personal-info--name text-xl">
+            {resume.info.fullName}
+          </div>
           <div className="personal-info--contact">
             <SocialMediaButton
               icon="mail"
@@ -54,19 +56,27 @@ export const ResumeSection = ({ resume }: ResumeSectionProps) => {
               {resume.info.location}
             </div>
           </div>
-          <div className="about-me">{resume.aboutMe}</div>
+          <div className="text-center responsive-margin">{resume.aboutMe}</div>
         </StackingCard>
 
         <StackingCard>
-          <h2 className="card-title">Education</h2>
-          <div>{resume.education.title}</div>
-          <div>{resume.education.place}</div>
-          <div>{resume.education.timespan}</div>
-          <div>{resume.education.description}</div>
+          <h2 className="card-title text-xxl">Education</h2>
+          <div className="card-content--centered">
+            <div className="education--title text-md">
+              {resume.education.title}
+            </div>
+            <div className="text-center text-sm">{resume.education.place}</div>
+            <div className="text-center text-xxs">
+              {resume.education.timespan}
+            </div>
+            <div className="text-center responsive-margin">
+              {resume.education.description}
+            </div>
+          </div>
         </StackingCard>
 
         <StackingCard>
-          <h2 className="card-title">Experience</h2>
+          <h2 className="card-title text-xl">Experience</h2>
           {resume.experience.map((exp) => {
             return (
               <div key={exp.title + exp.place + exp.timespan}>
@@ -81,7 +91,7 @@ export const ResumeSection = ({ resume }: ResumeSectionProps) => {
         </StackingCard>
 
         <StackingCard>
-          <h2 className="card-title">Skills</h2>
+          <h2 className="card-title text-xl">Skills</h2>
           {resume.skills.map((skillset) => (
             <div key={skillset.title}>
               <div>{skillset.title}</div>
@@ -91,7 +101,7 @@ export const ResumeSection = ({ resume }: ResumeSectionProps) => {
         </StackingCard>
 
         <StackingCard>
-          <h2 className="card-title">Languages</h2>
+          <h2 className="card-title text-xl">Languages</h2>
           {resume.languages.map((lang) => (
             <div key={lang.language}>
               <div>{lang.language}</div>

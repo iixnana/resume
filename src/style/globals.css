@@ -25,6 +25,7 @@
   --icon-button-background: #FFF;
   --icon-button-border: #f15391;
   --progress-bar-color: #A57B2C;
+  --border-color: #201F1E;
 
   --table-outer-color: #4d3a2a;
   --table-inner-color: #684d35;
@@ -34,8 +35,6 @@
   --spacing-small: clamp(0.75rem, 0.75rem + 0.8vmin, 1.5rem);
   --spacing-medium: clamp(1rem, 1rem + 1.2vmin, 2rem);
   --spacing-large: clamp(1.5rem, 1.5rem + 2vmin, 3rem);
-
-  --border-color: #201F1E;
 }
 
 :root.dark {
@@ -54,9 +53,51 @@
   --icon-button-border: #f15391;
   --progress-bar-color: #A57B2C;
   --secondary-accent-color: #FFFEFA;
+  --border-color: #FFFEFA;
 
   --table-outer-color: #322417;
   --table-inner-color: #573c2b;
+}
 
-  --border-color: #FFFEFA;
+.text-xxs {
+  font-size: clamp(0.65rem, 1.1vw, 0.78rem);
+  line-height: 1.2;
+}
+
+
+.text-xs {
+  font-size: clamp(0.75rem, 1.3vw, 0.9rem);
+  line-height: 1.2;
+}
+
+.text-sm {
+  font-size: clamp(0.9rem, 1.6vw, 1.1rem);
+  line-height: 1.25;
+}
+
+.text-md {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  line-height: 1.25;
+}
+
+
+.text-lg {
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  line-height: 1.2;
+}
+
+.text-xl {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: 1.15;
+}
+
+
+.text-xxl {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.1;
+}
+
+
+.text-center {
+  text-align: center;
 }

@@ -38,8 +38,6 @@
 .personal-info--name {
     text-align: center;
     font-family: "BoldPixels", system-ui, Avenir, Helvetica, Arial, sans-serif;
-    font-size: clamp(2rem, 6vw, 4rem);
-    line-height: clamp(1.5rem, 6vw, 4rem);
     margin-top: var(--spacing-medium);
     word-spacing: -10px;
 }
@@ -74,17 +72,29 @@
     justify-content: center;
 }
 
-.about-me {
-    margin: 0 7rem;
-    text-align: center;
-}
-
 .card-title {
     text-align: center;
     font-family: "BoldPixels", system-ui, Avenir, Helvetica, Arial, sans-serif;
-    font-size: clamp(2rem, 6vw, 3rem);
-    line-height: clamp(1.5rem, 6vw, 2.5rem);
     margin-top: var(--spacing-xsmall);
+    margin-bottom: var(--spacing-xsmall);
+}
+
+.education--title {
+    text-align: center;
+    font-weight: 700;
+}
+
+.card-content--centered {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+
+.responsive-margin {
+    margin: 0 7rem;
 }
 
 @media (max-width: 640px) {
@@ -104,7 +114,7 @@
 }
 
 @media (max-width: 1439px) {
-    .about-me {
+    .responsive-margin {
         margin: 0;
     }
 }
