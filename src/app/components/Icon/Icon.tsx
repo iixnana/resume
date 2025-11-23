@@ -9,9 +9,10 @@ interface IconProps {
   name: IconOptions;
   alt?: string;
   className?: string;
+  canFocus?: boolean;
 }
 
-export const Icon = ({ name, alt = name, className }: IconProps) => {
+export const Icon = ({ name, alt = name, className, canFocus }: IconProps) => {
   const { isDark } = useTheme();
 
   const icons = [
@@ -31,7 +32,7 @@ export const Icon = ({ name, alt = name, className }: IconProps) => {
   const SvgComponent = icon.component;
 
   return (
-    <div className="img-wrapper">
+    <div className={classNames("img-wrapper", canFocus && "icon-button")}>
       {SvgComponent ? (
         <SvgComponent
           aria-label={alt}

@@ -23,7 +23,7 @@ export const ResumeSection = ({ resume }: ResumeSectionProps) => {
   return (
     <section id="resume-section" ref={sectionRef} className="resume-section">
       <CardStack scrollYProgress={scrollYProgress}>
-        <StackingCard id="information">
+        <StackingCard id="information" className="card-content--center">
           <h2 className="screen-reader-only">Personal information</h2>
           <div className="portrait">
             <div className="pixel-frame">

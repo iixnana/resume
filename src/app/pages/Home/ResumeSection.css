@@ -39,12 +39,22 @@
     text-align: center;
     font-weight: 800;
     font-family: "BoldPixels", system-ui, Avenir, Helvetica, Arial, sans-serif;
-    font-size: clamp(3rem, 6vw, 4rem);
-    line-height: clamp(2.5rem, 6vw, 4rem);
+    font-size: clamp(2rem, 6vw, 4rem);
+    line-height: clamp(1.5rem, 6vw, 4rem);
     margin-top: var(--spacing-medium);
+    word-spacing: -10px;
+}
+
+.location {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
 }
 
 .personal-info--contact {
+    line-height: 1;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -61,11 +71,22 @@
     margin: var(--spacing-small);
 }
 
-.location {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.card-content--center {
     justify-content: center;
-    gap: 6px;
-    width:
+}
+
+@media (max-width: 640px) {
+    .personal-info--contact {
+        flex-direction: column;
+        gap: var(--spacing-xsmall);
+    }
+
+    .portrait {
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+
+    .personal-info--name {
+        word-spacing: -5px;
+    }
 }

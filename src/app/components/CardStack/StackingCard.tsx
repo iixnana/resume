@@ -3,6 +3,7 @@ import "./StackingCard.css";
 import { motion, useTransform, type MotionValue } from "motion/react";
 import { CONTENT_FILTER_END, CONTENT_FILTER_START } from "./constants";
 import { useViewportSize } from "../../../hooks/useViewportSize";
+import { classNames } from "../../../utils/classnames";
 
 interface StackingCardProps {
   stackIndex?: number; // internal, injected by CardStack
@@ -15,10 +16,12 @@ type MotionDivProps = ComponentPropsWithoutRef<typeof motion.div>;
 export type CardProps = MotionDivProps &
   StackingCardProps & {
     children: ReactNode;
+    className?: string;
   };
 
 export const StackingCard = ({
   children,
+  className,
   stackIndex,
   stackCount,
   scrollYProgress,
@@ -78,7 +81,7 @@ export const StackingCard = ({
       {...props}
     >
       <motion.div
-        className="card__content"
+        className={classNames("card__content", className)}
         style={{
           filter: blurFilter,
           opacity: contentOpacity,

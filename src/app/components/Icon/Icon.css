@@ -14,11 +14,14 @@
     background-color: var(--icon-button-background);
     border: 1px solid transparent;
     box-sizing: border-box;
-    transition: box-shadow 0.3s ease;
     color: var(--icon-svg-color);
 }
 
-.img-wrapper:hover {
+.icon-button {
+    transition: box-shadow 0.3s ease;
+}
+
+.icon-button:hover {
     box-shadow: 0 0 14px 4px var(--icon-button-border);
 }
 
@@ -26,4 +29,12 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+@media (max-width: 640px) {
+    .img-wrapper {
+        padding: 3px;
+        width: 24px;
+        height: 24px;
+    }
 }

@@ -19,7 +19,7 @@ export const SocialMediaButton = ({
 }: SocialMediaButtonProps) => {
   return (
     <a {...props} href={href} target={target} className="social-media-button">
-      <Icon name={icon} />
+      <Icon name={icon} canFocus={true} />
       {children}
     </a>
   );
