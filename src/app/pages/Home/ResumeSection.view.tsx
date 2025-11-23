@@ -101,12 +101,34 @@ export const ResumeSection = ({ resume }: ResumeSectionProps) => {
 
         <StackingCard>
           <h2 className="card-title text-xxl">Languages</h2>
-          {resume.languages.map((lang) => (
-            <div key={lang.language}>
-              <div>{lang.language}</div>
-              <div>{lang.level}</div>
+          <div className="card-content--centered">
+            <div className="language-legend">
+              {["A1", "A2", "B1", "B2", "C1", "Native"].map((level) => (
+                <div className="legend-item text-xxs" key={level}>
+                  <span
+                    className={`legend-dot legend-${level.toLowerCase()}`}
+                  ></span>
+                  {level}
+                </div>
+              ))}
             </div>
-          ))}
+
+            <div className="language-list">
+              {resume.languages.map((lang) => (
+                <div key={lang.language} className="language-item">
+                  <div className="language-label">
+                    <span className="text-bold text-sm">{lang.language}</span>
+                    <span className="text-xxs">{lang.level}</span>
+                  </div>
+
+                  <div
+                    className={`language-bar language-bar--${lang.level.toLowerCase()}`}
+                    aria-hidden="true"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
         </StackingCard>
       </CardStack>
     </section>

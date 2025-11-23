@@ -86,14 +86,14 @@ $shadows-big:    multiple-box-shadow(100);
 }
 
 .stars-big {
-  width: 10px;
-  height: 10px;
+  width: 9px;
+  height: 9px;
   box-shadow: $shadows-big;
   animation: animStarDown 150s linear infinite;
 
   &::after {
-    width: 10px;
-    height: 10px;
+    width: 9px;
+    height: 9px;
     box-shadow: $shadows-big;
   }
 }
