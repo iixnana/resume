@@ -21,11 +21,12 @@ export const StartSection = ({ project }: HeaderSectionProps) => {
             <h2 className="welcome-h2">Hello, World!</h2>
             <div>＼（＾▽＾）／</div>
             <p className="welcome-description">
-              Thank you for visiting my website. It took quite a while to build,
-              thus each visitor is greatly appreciated! This was built for fun,
-              so you should anticipate a couple of fun features built-in.
-              <br />
-              <b>First tip:</b> Try moving the logo.
+              Thank you for visiting my website, each visitor is greatly
+              appreciated! Due to limited time, this is only the first version
+              of the website, thus there may be issues. If you find something,
+              feel free to report it through the link below. There will be more
+              fun features implemented in the future. However, here is the first
+              tip: Try moving the logo.
               <br />
               Enjoy! o(^▽^)o
             </p>
