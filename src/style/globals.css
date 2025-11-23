@@ -26,23 +26,11 @@
   --theme-toggle-border: #f15391;
   --progress-bar-color: #A57B2C;
 
-  --card-width: min(64rem, 90vw);
-  --card-height: 60vh;
-  --folder-width: calc(var(--card-width) * 1.05);
-  --card-drop-distance: 45vh;
-  --stack-location: 10vh;
-  --folder-location: 10vh;
-  --card-drop-distance: 83vh;
-
-  /* where the card stack starts */
-  --card-stack-top: 10vh;
-  /* how tall the cards are */
-  --card-height: 60vh;
-  /* where the folder is anchored from the bottom */
-  --folder-bottom: 10vh;
-  /* how far *inside* the folder the card top should end */
-  --card-inside-offset: 3vh;
-
+  --border-radius: 1rem;
+  --spacing-xsmall: 1rem;
+  --spacing-small: 1.5rem;
+  --spacing-medium: 2rem;
+  --spacing-large: 3rem;
 }
 
 :root.dark {
@@ -61,22 +49,4 @@
   --theme-toggle-border: #f15391;
   --progress-bar-color: #A57B2C;
   --secondary-accent-color: #FFFEFA;
-}
-
-@media (max-width: 1280px) or (max-height: 1000px) {
-  :root {
-    --card-height: 80vh;
-    --stack-location: 2vh;
-    --folder-location: 15vh;
-    --card-drop-distance: 88vh;
-  }
-}
-
-@media (max-width: 900px) and (max-height: 600px) {
-  :root {
-    --card-height: 80vh;
-    --stack-location: 2vh;
-    --folder-location: 15vh;
-    --card-drop-distance: 88vh;
-  }
 }

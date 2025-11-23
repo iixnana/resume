@@ -1,4 +1,4 @@
 .theme-toggle {
-    top: 1rem;
-    right: 1rem;
+    top: var(--spacing-xsmall);
+    right: var(--spacing-xsmall);
 }

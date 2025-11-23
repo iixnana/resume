@@ -1,6 +1,6 @@
 .scroll-to-top {
-    bottom: 1rem;
-    right: 1rem;
+    bottom: var(--spacing-xsmall);
+    right: var(--spacing-xsmall);
 
     opacity: 0;
     transform: translateY(12px);

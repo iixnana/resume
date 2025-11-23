@@ -2,8 +2,8 @@
     z-index: 1;
     overflow: hidden;
     background-color: var(--card-background-color);
-    padding: 1.5rem;
-    border-radius: 1rem;
+    padding: var(--spacing-small);
+    border-radius: var(--border-radius);
     border: 1px solid var(--secondary-accent-color);
     box-sizing: border-box;
 
