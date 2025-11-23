@@ -4,6 +4,7 @@ import { StackingCard } from "../../components/CardStack/StackingCard";
 import { CardStack } from "../../components/CardStack/CardStack";
 import { useScroll } from "motion/react";
 import "./ResumeSection.css";
+import "./PixelFrame.css";
 
 interface ResumeSectionProps {
   resume: Resume;
@@ -22,17 +23,25 @@ export const ResumeSection = ({ resume }: ResumeSectionProps) => {
       <CardStack scrollYProgress={scrollYProgress}>
         <StackingCard id="information">
           <h2 className="screen-reader-only">Personal information</h2>
+          <div className="portrait">
+            <div className="pixel-frame">
+              <img
+                src="/pixel-art.png"
+                alt="Portrait"
+                className="pixel-frame__img"
+              />
+            </div>
+          </div>
           <div className="personal-info--name">{resume.info.fullName}</div>
-          <div>{resume.info.location}</div>
-          <div>{resume.info.contact.email}</div>
-          <div>{resume.info.contact.linkedin}</div>
+          <div className="personal-info--contact">
+            <div>{resume.info.contact.email}</div>
+            <div>{resume.info.contact.linkedin}</div>
+            <div>{resume.info.location}</div>
+          </div>
+
           <div>{resume.project.repo}</div>
           <div>{resume.project.issues}</div>
-        </StackingCard>
-
-        <StackingCard>
-          <h2>About me</h2>
-          {resume.aboutMe}
+          <div>{resume.aboutMe}</div>
         </StackingCard>
 
         <StackingCard>
