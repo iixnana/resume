@@ -172,7 +172,7 @@
     }
 }
 
-@media (max-width: 600px) and (max-height: 799px) {
+@media (max-width: 600px) or (max-height: 799px) {
     #computer {
         display: none;
     }

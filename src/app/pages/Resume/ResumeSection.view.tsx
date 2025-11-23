@@ -1,10 +1,9 @@
 import { useRef } from "react";
 import type { Resume } from "../../../types/resume";
-import { Card } from "../../components/Card/Card";
+import { StackingCard } from "../../components/CardStack/StackingCard";
 import { CardStack } from "../../components/CardStack/CardStack";
 import "./ResumeSection.css";
 import { useScroll } from "motion/react";
-import { FolderSVG } from "../../../svg/FolderSVG";
 
 interface ResumeSectionProps {
   resume: Resume;
@@ -21,7 +20,7 @@ export const ResumeSection = ({ resume }: ResumeSectionProps) => {
   return (
     <section id="resume-section" ref={sectionRef} className="resume-section">
       <CardStack scrollYProgress={scrollYProgress}>
-        <Card id="information">
+        <StackingCard id="information">
           <h2 className="screen-reader-only">Personal information</h2>
           <div>{resume.info.fullName}</div>
           <div>{resume.info.location}</div>
@@ -29,22 +28,22 @@ export const ResumeSection = ({ resume }: ResumeSectionProps) => {
           <div>{resume.info.contact.linkedin}</div>
           <div>{resume.project.repo}</div>
           <div>{resume.project.issues}</div>
-        </Card>
+        </StackingCard>
 
-        <Card>
+        <StackingCard>
           <h2>About me</h2>
           {resume.aboutMe}
-        </Card>
+        </StackingCard>
 
-        <Card>
+        <StackingCard>
           <h2>Education</h2>
           <div>{resume.education.title}</div>
           <div>{resume.education.place}</div>
           <div>{resume.education.timespan}</div>
           <div>{resume.education.description}</div>
-        </Card>
+        </StackingCard>
 
-        <Card>
+        <StackingCard>
           <h2>Experience</h2>
           {resume.experience.map((exp) => {
             return (
@@ -57,9 +56,9 @@ export const ResumeSection = ({ resume }: ResumeSectionProps) => {
               </div>
             );
           })}
-        </Card>
+        </StackingCard>
 
-        <Card>
+        <StackingCard>
           <h2>Skills</h2>
           {resume.skills.map((skillset) => (
             <div>
@@ -67,9 +66,9 @@ export const ResumeSection = ({ resume }: ResumeSectionProps) => {
               <div>{skillset.skills.map((skill) => skill)}</div>
             </div>
           ))}
-        </Card>
+        </StackingCard>
 
-        <Card>
+        <StackingCard>
           <h2>Languages</h2>
           {resume.languages.map((lang) => (
             <div>
@@ -77,7 +76,7 @@ export const ResumeSection = ({ resume }: ResumeSectionProps) => {
               <div>{lang.level}</div>
             </div>
           ))}
-        </Card>
+        </StackingCard>
       </CardStack>
     </section>
   );
