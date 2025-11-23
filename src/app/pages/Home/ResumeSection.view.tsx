@@ -22,7 +22,7 @@ export const ResumeSection = ({ resume }: ResumeSectionProps) => {
       <CardStack scrollYProgress={scrollYProgress}>
         <StackingCard id="information">
           <h2 className="screen-reader-only">Personal information</h2>
-          <div>{resume.info.fullName}</div>
+          <div className="personal-info--name">{resume.info.fullName}</div>
           <div>{resume.info.location}</div>
           <div>{resume.info.contact.email}</div>
           <div>{resume.info.contact.linkedin}</div>

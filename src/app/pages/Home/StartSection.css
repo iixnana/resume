@@ -55,7 +55,7 @@
     left: 0;
     width: 100%;
     height: 60px;
-    background-color: #5c1d00;
+    background-color: var(--table-outer-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,7 +64,7 @@
 .table-inner {
     width: 100%;
     height: 40px;
-    background-color: #6a3100;
+    background-color: var(--table-inner-color);
 }
 
 

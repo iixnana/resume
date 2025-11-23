@@ -22,7 +22,7 @@
     min-width: 320px;
     box-sizing: border-box;
     padding: var(--spacing-small);
-    border: 1px solid black;
+    border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
 }
 
