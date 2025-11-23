@@ -25,9 +25,8 @@ export const StartSection = ({ project }: HeaderSectionProps) => {
               appreciated! Due to limited time, this is only the first version
               of the website, thus there may be issues. If you find something,
               feel free to report it through the link below. There will be more
-              fun features implemented in the future.
-              <br />
-              <b>First tip:</b> Try moving the logo.
+              fun features implemented in the future. However, here is the first
+              tip: Try moving the logo.
               <br />
               Enjoy! o(^▽^)o
             </p>
