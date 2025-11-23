@@ -79,11 +79,6 @@
     margin-bottom: var(--spacing-xsmall);
 }
 
-.education--title {
-    text-align: center;
-    font-weight: 700;
-}
-
 .card-content--centered {
     height: 100%;
     display: flex;
@@ -93,8 +88,30 @@
     gap: 2px;
 }
 
+.card-content--list-gap {
+    gap: 2rem;
+}
+
 .responsive-margin {
     margin: 0 7rem;
+}
+
+.skillset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.skill-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 400px;
+    gap: 6px;
 }
 
 @media (max-width: 640px) {
@@ -111,10 +128,19 @@
     .personal-info--name {
         word-spacing: -5px;
     }
+
+    .skill-container {
+        max-width: 100%;
+        gap: 3px;
+    }
 }
 
 @media (max-width: 1439px) {
     .responsive-margin {
         margin: 0;
+    }
+
+    .skill-container {
+        max-width: 600px;
     }
 }

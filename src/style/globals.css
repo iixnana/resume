@@ -101,3 +101,7 @@
 .text-center {
   text-align: center;
 }
+
+.text-bold {
+  font-weight: 700;
+}
