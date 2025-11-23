@@ -22,18 +22,18 @@
   --text-color: #201F1E;
   --link-color: #E21266;
   --link-hover-color: #A30F4A;
-  --theme-toggle-background: #FFF;
-  --theme-toggle-border: #f15391;
+  --icon-button-background: #FFF;
+  --icon-button-border: #f15391;
   --progress-bar-color: #A57B2C;
 
   --table-outer-color: #4d3a2a;
   --table-inner-color: #684d35;
 
   --border-radius: 1rem;
-  --spacing-xsmall: 1rem;
-  --spacing-small: 1.5rem;
-  --spacing-medium: 2rem;
-  --spacing-large: 3rem;
+  --spacing-xsmall: clamp(0.5rem, 0.5rem + 0.5vmin, 1rem);
+  --spacing-small: clamp(0.75rem, 0.75rem + 0.8vmin, 1.5rem);
+  --spacing-medium: clamp(1rem, 1rem + 1.2vmin, 2rem);
+  --spacing-large: clamp(1.5rem, 1.5rem + 2vmin, 3rem);
 
   --border-color: #201F1E;
 }
@@ -50,8 +50,8 @@
   --link-color: #F9A1CE;
   --link-hover-color: #FBD0E6;
   --button-background-color: #786E68;
-  --theme-toggle-background: #000;
-  --theme-toggle-border: #f15391;
+  --icon-button-background: #000;
+  --icon-button-border: #f15391;
   --progress-bar-color: #A57B2C;
   --secondary-accent-color: #FFFEFA;
 

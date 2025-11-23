@@ -1,13 +1,9 @@
 :root {
     --frame-px: 6px;
-    /* "pixel" size – tweak this */
     --frame-inner: #fff;
-    /* light frame color */
     --frame-mid: var(--accent-color);
-    /* accent color */
     --frame-outer: #000;
-    /* outline */
-    --picture-size: clamp(125px, min(26vw, 26vh), 250px);
+    --picture-size: clamp(100px, min(26vw, 26vh), 250px);
 }
 
 .pixel-frame {
@@ -26,4 +22,10 @@
 .pixel-frame__img {
     display: block;
     width: 100%;
+}
+
+@media (max-width: 640px) {
+    :root {
+        --frame-px: 4px;
+    }
 }

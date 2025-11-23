@@ -2,21 +2,11 @@
     z-index: 1;
     overflow: hidden;
     background-color: var(--card-background-color);
-    padding: var(--spacing-small);
+    padding: var(--spacing-medium);
     border-radius: var(--border-radius);
     border: 1px solid var(--secondary-accent-color);
     box-sizing: border-box;
-
-    h2 {
-        font-weight: 500;
-        margin-top: 0;
-    }
-
-    div {
-        font-weight: 300;
-    }
 }
-
 
 .card--stacked {
     position: absolute;
@@ -28,4 +18,12 @@
 
     width: var(--card-width);
     height: var(--card-height);
+}
+
+.card__content {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
