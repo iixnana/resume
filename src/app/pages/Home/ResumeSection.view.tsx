@@ -35,7 +35,7 @@ export const ResumeSection = ({ resume }: ResumeSectionProps) => {
               />
             </div>
           </div>
-          <div className="personal-info--name text-xl">
+          <div className="personal-info--name text-xxl">
             {resume.info.fullName}
           </div>
           <div className="personal-info--contact">
