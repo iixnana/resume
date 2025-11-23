@@ -3,9 +3,9 @@
     overflow: hidden;
     background-color: var(--card-background-color);
     padding: 1.5rem;
-    margin: 50px;
     border-radius: 1rem;
     border: 1px solid var(--secondary-accent-color);
+    box-sizing: border-box;
 
     h2 {
         font-weight: 500;
@@ -15,4 +15,17 @@
     div {
         font-weight: 300;
     }
+}
+
+
+.card--stacked {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    pointer-events: auto;
+
+    width: var(--card-width);
+    height: var(--card-height);
 }

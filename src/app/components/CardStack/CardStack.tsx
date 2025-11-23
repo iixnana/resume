@@ -7,9 +7,9 @@ import {
   type ReactNode,
 } from "react";
 import type { MotionValue } from "motion/react";
-import type { CardProps } from "../Card/Card";
 import "./CardStack.css";
 import { Folder } from "../Folders/Folder";
+import type { CardProps } from "./StackingCard";
 
 interface CardStackProps {
   children: ReactNode;

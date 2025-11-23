@@ -9,8 +9,8 @@
 // </div>
 // ======================================================
 
-$star-max-offset: 1000;
-$star-loop-distance: 1000vh;
+$star-max-offset: 100;
+$star-loop-distance: 100vh;
 
 // Generate N random box-shadows inside 0..$star-max-offset px
 @function multiple-box-shadow($n, $max-offset: $star-max-offset) {
