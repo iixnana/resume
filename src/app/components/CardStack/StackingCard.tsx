@@ -52,7 +52,7 @@ export const StackingCard = ({
 
   const dropDistance =
     viewport === "big" || viewport === "laptop"
-      ? 84
+      ? 83
       : viewport === "tablet"
       ? 85
       : 84;
