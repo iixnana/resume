@@ -1,8 +1,6 @@
-interface MailProps {
-  className?: string;
-}
+import type { SVGProps } from "./types";
 
-export const MailSVG = ({ className }: MailProps) => {
+export const MailSVG = ({ className }: SVGProps) => {
   return (
     <svg
       className={className}

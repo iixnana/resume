@@ -24,7 +24,7 @@ body {
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: 1px solid var(--accent-color);
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
@@ -32,11 +32,11 @@ button {
   color: var(--text-color);
   background-color: var(--button-background-color);
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: box-shadow 0.25s;
 }
 
 button:hover {
-  border-color: var(--accent-color);
+  box-shadow: 0 0 8px var(--icon-button-border);
 }
 
 button:focus {

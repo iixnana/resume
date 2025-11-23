@@ -1,0 +1,53 @@
+:root {
+    --icon-svg-color: #201F1E;
+}
+
+:root.dark {
+    --icon-svg-color: #FFFEFA;
+}
+
+.slide-button {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--icon-button-background);
+    margin: 0 0.5rem;
+}
+
+.slide-button-icon {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    box-sizing: border-box;
+    margin: 6px;
+}
+
+.container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+@media (max-width: 640px) {
+
+    .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .slide-button {
+        order: 2;
+        margin-top: 0.5rem;
+    }
+}

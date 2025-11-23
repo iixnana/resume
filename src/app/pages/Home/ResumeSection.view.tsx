@@ -7,6 +7,8 @@ import "./ResumeSection.css";
 import "./PixelFrame.css";
 import { SocialMediaButton } from "../../components/SocialMedia/SocialMediaButton";
 import { Icon } from "../../components/Icon/Icon";
+import { Pill } from "../../components/Pill/Pill";
+import { ExperienceSlideshow } from "../../components/ExperienceSlideshow/ExperienceSlideshow";
 
 interface ResumeSectionProps {
   resume: Resume;
@@ -34,7 +36,9 @@ export const ResumeSection = ({ resume }: ResumeSectionProps) => {
               />
             </div>
           </div>
-          <div className="personal-info--name">{resume.info.fullName}</div>
+          <div className="personal-info--name text-xxl">
+            {resume.info.fullName}
+          </div>
           <div className="personal-info--contact">
             <SocialMediaButton
               icon="mail"
@@ -54,50 +58,77 @@ export const ResumeSection = ({ resume }: ResumeSectionProps) => {
               {resume.info.location}
             </div>
           </div>
-          <div>{resume.aboutMe}</div>
+          <div className="text-center responsive-margin">{resume.aboutMe}</div>
         </StackingCard>
 
         <StackingCard>
-          <h2>Education</h2>
-          <div>{resume.education.title}</div>
-          <div>{resume.education.place}</div>
-          <div>{resume.education.timespan}</div>
-          <div>{resume.education.description}</div>
+          <h2 className="card-title text-xxl">Education</h2>
+          <div className="card-content--centered text-center">
+            <div className="text-bold text-lg">{resume.education.title}</div>
+            <div className="text-sm">{resume.education.place}</div>
+            <div className="text-xxs">{resume.education.timespan}</div>
+            <div className="responsive-margin">
+              {resume.education.description}
+            </div>
+          </div>
         </StackingCard>
 
         <StackingCard>
-          <h2>Experience</h2>
-          {resume.experience.map((exp) => {
-            return (
-              <div key={exp.title + exp.place + exp.timespan}>
-                <div>{exp.title}</div>
-                <div>{exp.place}</div>
-                <div>{exp.timespan}</div>
-                <div>{exp.languages}</div>
-                <div>{exp.description}</div>
+          <h2 className="card-title text-xxl">Experience</h2>
+          <div className="card-content--centered">
+            <ExperienceSlideshow experiences={resume.experience} />
+            <span className="text-center exp-total">
+              <span className="text-bold">Total:</span> 6 years
+            </span>
+          </div>
+        </StackingCard>
+
+        <StackingCard>
+          <h2 className="card-title text-xxl">Skills</h2>
+          <div className="card-content--centered card-content--list-gap">
+            {resume.skills.map((skillset) => (
+              <div className="skillset" key={skillset.title}>
+                <div className="text-md text-bold">{skillset.title}</div>
+                <div className="skill-container responsive-margin">
+                  {skillset.skills.map((skill) => (
+                    <Pill>{skill}</Pill>
+                  ))}
+                </div>
               </div>
-            );
-          })}
+            ))}
+          </div>
         </StackingCard>
 
         <StackingCard>
-          <h2>Skills</h2>
-          {resume.skills.map((skillset) => (
-            <div key={skillset.title}>
-              <div>{skillset.title}</div>
-              <div>{skillset.skills.map((skill) => skill)}</div>
+          <h2 className="card-title text-xxl">Languages</h2>
+          <div className="card-content--centered">
+            <div className="language-legend">
+              {["A1", "A2", "B1", "B2", "C1", "Native"].map((level) => (
+                <div className="legend-item text-xxs" key={level}>
+                  <span
+                    className={`legend-dot legend-${level.toLowerCase()}`}
+                  ></span>
+                  {level}
+                </div>
+              ))}
             </div>
-          ))}
-        </StackingCard>
 
-        <StackingCard>
-          <h2>Languages</h2>
-          {resume.languages.map((lang) => (
-            <div key={lang.language}>
-              <div>{lang.language}</div>
-              <div>{lang.level}</div>
+            <div className="language-list">
+              {resume.languages.map((lang) => (
+                <div key={lang.language} className="language-item">
+                  <div className="language-label">
+                    <span className="text-bold text-sm">{lang.language}</span>
+                    <span className="text-xxs">{lang.level}</span>
+                  </div>
+
+                  <div
+                    className={`language-bar language-bar--${lang.level.toLowerCase()}`}
+                    aria-hidden="true"
+                  />
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </StackingCard>
       </CardStack>
     </section>

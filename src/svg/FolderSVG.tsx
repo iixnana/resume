@@ -1,8 +1,6 @@
-interface FolderProps {
-  className?: string;
-}
+import type { SVGProps } from "./types";
 
-export const FolderSVG = ({ className }: FolderProps) => {
+export const FolderSVG = ({ className }: SVGProps) => {
   return (
     <svg
       className={className}
