@@ -9,10 +9,8 @@
 // </div>
 // ======================================================
 
-// How tall the starfield animation loop is.
-// Increase if you have very long pages.
-$star-max-offset: 100;
-$star-loop-distance: 100vh;
+$star-max-offset: 1000;
+$star-loop-distance: 1000vh;
 
 // Generate N random box-shadows inside 0..$star-max-offset px
 @function multiple-box-shadow($n, $max-offset: $star-max-offset) {
@@ -30,9 +28,9 @@ $star-loop-distance: 100vh;
 }
 
 // Densities for three star layers
-$shadows-small:  multiple-box-shadow(350);
-$shadows-medium: multiple-box-shadow(100);
-$shadows-big:    multiple-box-shadow(50);
+$shadows-small:  multiple-box-shadow(7000);
+$shadows-medium: multiple-box-shadow(2000);
+$shadows-big:    multiple-box-shadow(100);
 
 #star-bg {
   position: absolute;

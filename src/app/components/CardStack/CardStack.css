@@ -1,0 +1,48 @@
+.card-stack-outer {
+    position: relative;
+    width: 100%;
+}
+
+.card-stack-inner {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    position: -webkit-sticky;
+}
+
+.card-stack-clip {
+    position: absolute;
+    left: 50%;
+    top: 10vh;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.card--stacked {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    pointer-events: auto;
+
+    width: 950px;
+    height: 600px;
+}
+
+@media (max-width: 1000px) {
+    .card--stacked {
+        width: 90%;
+        height: 80%;
+    }
+
+    .card-stack-clip {
+        top: 1rem;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+}

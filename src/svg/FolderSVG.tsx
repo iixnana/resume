@@ -2,7 +2,7 @@ interface FolderProps {
   className?: string;
 }
 
-export const Folder = ({ className }: FolderProps) => {
+export const FolderSVG = ({ className }: FolderProps) => {
   return (
     <svg
       className={className}
