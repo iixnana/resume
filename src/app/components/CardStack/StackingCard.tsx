@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import "./StackingCard.css";
 import { motion, useTransform, type MotionValue } from "motion/react";
 import { useCssVarResponsive } from "../../../hooks/useCssVarResponsive";
+import { SCROLL_SPEED } from "./constants";
 
 interface StackingCardProps {
   stackIndex?: number; // internal, injected by CardStack
@@ -34,7 +35,11 @@ export const StackingCard = ({
     return;
   }
 
-  const overall = useTransform(scrollYProgress, [0, 1], [0, stackCount]);
+  const overall = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [0, stackCount * SCROLL_SPEED]
+  );
 
   const local = useTransform(overall, (v) => {
     const raw = v - stackIndex; // index..index+1
@@ -46,6 +51,8 @@ export const StackingCard = ({
   const dropDistance = useCssVarResponsive("--card-drop-distance");
 
   const y = useTransform(local, (p) => `calc(${p} * ${dropDistance})`);
+  const blur = useTransform(local, [0.6, 1], [0, 4]);
+  const blurFilter = useTransform(blur, (b) => `blur(${b}px)`);
 
   console.log(dropDistance);
 
@@ -54,6 +61,7 @@ export const StackingCard = ({
       className={`card card--stacked`}
       style={{
         y,
+        filter: blurFilter,
         zIndex: stackCount - stackIndex,
       }}
       {...props}

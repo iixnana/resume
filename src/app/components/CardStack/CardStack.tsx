@@ -10,6 +10,7 @@ import type { MotionValue } from "motion/react";
 import "./CardStack.css";
 import { Folder } from "../Folders/Folder";
 import type { CardProps } from "./StackingCard";
+import { SCROLL_SPEED } from "./constants";
 
 interface CardStackProps {
   children: ReactNode;
@@ -22,10 +23,12 @@ export const CardStack = ({ children, scrollYProgress }: CardStackProps) => {
   ) as ReactElement<CardProps>[];
   const cardCount = cards.length;
 
+  const effectiveHeight = (cardCount * 100) / SCROLL_SPEED;
+
   return (
     <div
       className="card-stack-outer"
-      style={{ height: `${cardCount * 100}vh` }}
+      style={{ height: `${effectiveHeight}vh` }}
     >
       <div className="card-stack-inner">
         <div className="card-stack-clip">

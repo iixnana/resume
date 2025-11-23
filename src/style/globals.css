@@ -33,6 +33,16 @@
   --stack-location: 10vh;
   --folder-location: 10vh;
   --card-drop-distance: 83vh;
+
+  /* where the card stack starts */
+  --card-stack-top: 10vh;
+  /* how tall the cards are */
+  --card-height: 60vh;
+  /* where the folder is anchored from the bottom */
+  --folder-bottom: 10vh;
+  /* how far *inside* the folder the card top should end */
+  --card-inside-offset: 3vh;
+
 }
 
 :root.dark {

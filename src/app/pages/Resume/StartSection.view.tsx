@@ -23,7 +23,7 @@ export const StartSection = ({ project }: HeaderSectionProps) => {
             <p className="welcome-description">
               Thank you for visiting my website. It took quite a while to build,
               thus each visitor is greatly appreciated! This was built for fun,
-              so you should anticipate a couple of fun features.
+              so you should anticipate a couple of fun features built-in.
               <br />
               <b>First tip:</b> Try moving the logo.
               <br />
