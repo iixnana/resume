@@ -31,14 +31,6 @@
     }
 }
 
-@media (min-width: 1440px) {
-    :root {
-        --card-height: 80vh;
-        --stack-location: 2vh;
-        --folder-location: 15vh;
-    }
-}
-
 
 
 

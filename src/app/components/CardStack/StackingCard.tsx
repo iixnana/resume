@@ -68,8 +68,6 @@ export const StackingCard = ({
     [1, 0.2]
   );
 
-  console.log(dropDistance);
-
   return (
     <motion.div
       className={`card card--stacked`}
