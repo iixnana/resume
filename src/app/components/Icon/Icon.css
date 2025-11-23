@@ -1,0 +1,29 @@
+:root {
+    --icon-svg-color: #201F1E;
+}
+
+:root.dark {
+    --icon-svg-color: #FFFEFA;
+}
+
+.img-wrapper {
+    padding: 6px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--icon-button-background);
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease;
+    color: var(--icon-svg-color);
+}
+
+.img-wrapper:hover {
+    box-shadow: 0 0 14px 4px var(--icon-button-border);
+}
+
+.social-media-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

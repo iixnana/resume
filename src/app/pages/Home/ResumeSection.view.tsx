@@ -5,6 +5,8 @@ import { CardStack } from "../../components/CardStack/CardStack";
 import { useScroll } from "motion/react";
 import "./ResumeSection.css";
 import "./PixelFrame.css";
+import { SocialMediaButton } from "../../components/SocialMedia/SocialMediaButton";
+import { Icon } from "../../components/Icon/Icon";
 
 interface ResumeSectionProps {
   resume: Resume;
@@ -34,13 +36,24 @@ export const ResumeSection = ({ resume }: ResumeSectionProps) => {
           </div>
           <div className="personal-info--name">{resume.info.fullName}</div>
           <div className="personal-info--contact">
-            <div>{resume.info.contact.email}</div>
-            <div>{resume.info.contact.linkedin}</div>
-            <div>{resume.info.location}</div>
+            <SocialMediaButton
+              icon="mail"
+              href={`mailto:${resume.info.contact.email}`}
+            >
+              {resume.info.contact.email}
+            </SocialMediaButton>
+            <SocialMediaButton
+              icon="linkedin"
+              href={resume.info.contact.linkedin}
+              target="_blank"
+            >
+              LinkedIn
+            </SocialMediaButton>
+            <div className="location">
+              <Icon name="location" />
+              {resume.info.location}
+            </div>
           </div>
-
-          <div>{resume.project.repo}</div>
-          <div>{resume.project.issues}</div>
           <div>{resume.aboutMe}</div>
         </StackingCard>
 

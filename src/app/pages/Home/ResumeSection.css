@@ -60,3 +60,12 @@
     box-sizing: border-box;
     margin: var(--spacing-small);
 }
+
+.location {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width:
+}

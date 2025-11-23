@@ -22,8 +22,8 @@
   --text-color: #201F1E;
   --link-color: #E21266;
   --link-hover-color: #A30F4A;
-  --theme-toggle-background: #FFF;
-  --theme-toggle-border: #f15391;
+  --icon-button-background: #FFF;
+  --icon-button-border: #f15391;
   --progress-bar-color: #A57B2C;
 
   --table-outer-color: #4d3a2a;
@@ -50,8 +50,8 @@
   --link-color: #F9A1CE;
   --link-hover-color: #FBD0E6;
   --button-background-color: #786E68;
-  --theme-toggle-background: #000;
-  --theme-toggle-border: #f15391;
+  --icon-button-background: #000;
+  --icon-button-border: #f15391;
   --progress-bar-color: #A57B2C;
   --secondary-accent-color: #FFFEFA;
 
