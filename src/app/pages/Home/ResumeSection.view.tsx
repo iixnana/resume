@@ -2,8 +2,8 @@ import { useRef } from "react";
 import type { Resume } from "../../../types/resume";
 import { StackingCard } from "../../components/CardStack/StackingCard";
 import { CardStack } from "../../components/CardStack/CardStack";
-import "./ResumeSection.css";
 import { useScroll } from "motion/react";
+import "./ResumeSection.css";
 
 interface ResumeSectionProps {
   resume: Resume;
@@ -61,7 +61,7 @@ export const ResumeSection = ({ resume }: ResumeSectionProps) => {
         <StackingCard>
           <h2>Skills</h2>
           {resume.skills.map((skillset) => (
-            <div>
+            <div key={skillset.title}>
               <div>{skillset.title}</div>
               <div>{skillset.skills.map((skill) => skill)}</div>
             </div>
@@ -71,7 +71,7 @@ export const ResumeSection = ({ resume }: ResumeSectionProps) => {
         <StackingCard>
           <h2>Languages</h2>
           {resume.languages.map((lang) => (
-            <div>
+            <div key={lang.language}>
               <div>{lang.language}</div>
               <div>{lang.level}</div>
             </div>

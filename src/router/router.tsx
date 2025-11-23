@@ -3,7 +3,7 @@ import { NavigationRoute } from "./routes";
 import { Contact } from "../app/pages/ContactMe/Contact";
 import App from "../app/App";
 import { NotFound } from "../app/pages/Error/NotFound";
-import { Resume } from "../app/pages/Resume/Resume.page";
+import { Home } from "../app/pages/Home/Home.page";
 
 export const router = createBrowserRouter([
   {
@@ -12,7 +12,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Resume />,
+        element: <Home />,
       },
       {
         path: NavigationRoute.Contact,

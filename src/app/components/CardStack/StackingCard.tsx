@@ -1,8 +1,8 @@
-import type { ReactNode } from "react";
+import type { ComponentPropsWithoutRef, ReactNode } from "react";
 import "./StackingCard.css";
 import { motion, useTransform, type MotionValue } from "motion/react";
 import { useCssVarResponsive } from "../../../hooks/useCssVarResponsive";
-import { SCROLL_SPEED } from "./constants";
+import { CONTENT_FILTER_END, CONTENT_FILTER_START } from "./constants";
 
 interface StackingCardProps {
   stackIndex?: number; // internal, injected by CardStack
@@ -10,7 +10,9 @@ interface StackingCardProps {
   scrollYProgress?: MotionValue<number>; // internal, injected by CardStack
 }
 
-export type CardProps = HTMLAttributes<HTMLDivElement> &
+type MotionDivProps = ComponentPropsWithoutRef<typeof motion.div>;
+
+export type CardProps = MotionDivProps &
   StackingCardProps & {
     children: ReactNode;
   };
@@ -35,11 +37,7 @@ export const StackingCard = ({
     return;
   }
 
-  const overall = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [0, stackCount * SCROLL_SPEED]
-  );
+  const overall = useTransform(scrollYProgress, [0, 1], [0, stackCount]);
 
   const local = useTransform(overall, (v) => {
     const raw = v - stackIndex; // index..index+1
@@ -51,8 +49,18 @@ export const StackingCard = ({
   const dropDistance = useCssVarResponsive("--card-drop-distance");
 
   const y = useTransform(local, (p) => `calc(${p} * ${dropDistance})`);
-  const blur = useTransform(local, [0.6, 1], [0, 4]);
-  const blurFilter = useTransform(blur, (b) => `blur(${b}px)`);
+
+  const blurAmount = useTransform(
+    local,
+    [CONTENT_FILTER_START, CONTENT_FILTER_END],
+    [0, 4]
+  );
+  const blurFilter = useTransform(blurAmount, (b) => `blur(${b}px)`);
+  const contentOpacity = useTransform(
+    local,
+    [CONTENT_FILTER_START, CONTENT_FILTER_END],
+    [1, 0.2]
+  );
 
   console.log(dropDistance);
 
@@ -61,12 +69,19 @@ export const StackingCard = ({
       className={`card card--stacked`}
       style={{
         y,
-        filter: blurFilter,
         zIndex: stackCount - stackIndex,
       }}
       {...props}
     >
-      {children}
+      <motion.div
+        className="card__content"
+        style={{
+          filter: blurFilter,
+          opacity: contentOpacity,
+        }}
+      >
+        {children}
+      </motion.div>
     </motion.div>
   );
 };

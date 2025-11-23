@@ -7,7 +7,7 @@ export const FolderSVG = ({ className }: FolderProps) => {
     <svg
       className={className}
       viewBox="0 0 2000 1280"
-      preserveAspectRatio="false"
+      preserveAspectRatio="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <g id="layer1" transform="matrix(1,0,0,0.76141983,0,-76.019359)">
