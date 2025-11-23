@@ -38,10 +38,10 @@
 .personal-info--name {
     text-align: center;
     font-weight: 800;
-    font-family: "BoldPixels";
-    font-size: 4rem;
-    line-height: 4rem;
-    margin-top: clamp(1rem, 2rem, 6rem);
+    font-family: "BoldPixels", system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: clamp(3rem, 6vw, 4rem);
+    line-height: clamp(2.5rem, 6vw, 4rem);
+    margin-top: var(--spacing-medium);
 }
 
 .personal-info--contact {
@@ -49,7 +49,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin: var(--spacing-small);
+    margin: var(--spacing-xsmall);
     gap: var(--spacing-large);
 }
 

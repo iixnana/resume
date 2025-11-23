@@ -39,8 +39,8 @@
     text-align: center;
     font-weight: 800;
     font-family: "BoldPixels", system-ui, Avenir, Helvetica, Arial, sans-serif;
-    font-size: 6rem;
-    line-height: 6rem;
+    font-size: clamp(4rem, 6vw, 6rem);
+    line-height: clamp(3.5rem, 6vw, 6rem);
     margin: 0;
 }
 
