@@ -110,13 +110,21 @@
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 400px;
+    width: calc(var(--card-width) - var(--spacing-medium) * 2);
+
     gap: 6px;
 }
 
 .exp-total {
     margin-top: 12px;
 }
+
+@media (max-width: 1439px) or (max-height: 800px) {
+    .responsive-margin {
+        margin: 0;
+    }
+}
+
 
 @media (max-width: 640px) {
     .personal-info--contact {
@@ -134,18 +142,8 @@
     }
 
     .skill-container {
-        max-width: 100%;
+
         gap: 3px;
-    }
-}
-
-@media (max-width: 1439px) {
-    .responsive-margin {
-        margin: 0;
-    }
-
-    .skill-container {
-        max-width: 600px;
     }
 }
 
@@ -162,8 +160,7 @@
     align-items: center;
 }
 
-/* On wider screens, align name/level on the left and bar on the right */
-@media (min-width: 600px) {
+@media (min-width: 1028px) {
     .language-item {
         flex-direction: row;
         align-items: center;
@@ -178,8 +175,6 @@
     gap: 0.5rem;
 }
 
-
-/* The bar itself */
 .language-bar {
     position: relative;
     width: 100%;
@@ -189,7 +184,6 @@
     overflow: hidden;
 }
 
-/* Filled part */
 .language-bar::after {
     content: "";
     position: absolute;

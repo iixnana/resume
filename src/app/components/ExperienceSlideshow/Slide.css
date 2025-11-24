@@ -1,6 +1,6 @@
 .slide {
     flex: 0 0 90%;
-    height: 40vh;
+    height: 50vh;
     background-color: var(--background-color);
     border: 1px solid var(--accent-color);
     border-radius: 10px;
@@ -30,11 +30,9 @@
 @media (max-width: 640px) {
     .slide {
         padding: 0.5rem;
-        height: 60vh;
+        height: 52vh;
         max-width: 100%;
         order: 1;
         flex: 0 0 100%;
     }
-
-
 }
