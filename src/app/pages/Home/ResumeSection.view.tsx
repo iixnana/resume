@@ -62,6 +62,16 @@ export const ResumeSection = ({ resume }: ResumeSectionProps) => {
         </StackingCard>
 
         <StackingCard>
+          <h2 className="card-title text-xxl">Experience</h2>
+          <div className="card-content--centered">
+            <ExperienceSlideshow experiences={resume.experience} />
+            <span className="text-center exp-total">
+              <span className="text-bold">Total:</span> 6 years
+            </span>
+          </div>
+        </StackingCard>
+
+        <StackingCard>
           <h2 className="card-title text-xxl">Education</h2>
           <div className="card-content--centered text-center">
             <div className="text-bold text-lg">{resume.education.title}</div>
@@ -70,16 +80,6 @@ export const ResumeSection = ({ resume }: ResumeSectionProps) => {
             <div className="responsive-margin">
               {resume.education.description}
             </div>
-          </div>
-        </StackingCard>
-
-        <StackingCard>
-          <h2 className="card-title text-xxl">Experience</h2>
-          <div className="card-content--centered">
-            <ExperienceSlideshow experiences={resume.experience} />
-            <span className="text-center exp-total">
-              <span className="text-bold">Total:</span> 6 years
-            </span>
           </div>
         </StackingCard>
 
