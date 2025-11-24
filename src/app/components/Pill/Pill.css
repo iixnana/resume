@@ -1,7 +1,6 @@
 .pill {
     pointer-events: none;
-    background-color: #EFF4FF;
-    color: #2557D6;
+    background-color: var(--button-background-color);
     border: none;
     padding: 10px 20px;
     text-align: center;
@@ -10,7 +9,7 @@
     border-radius: 100px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 640px) or (max-height: 700px) {
     .pill {
         padding: 5px 10px;
     }

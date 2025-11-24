@@ -89,7 +89,7 @@ export const ResumeSection = ({ resume }: ResumeSectionProps) => {
             {resume.skills.map((skillset) => (
               <div className="skillset" key={skillset.title}>
                 <div className="text-md text-bold">{skillset.title}</div>
-                <div className="skill-container responsive-margin">
+                <div className="skill-container">
                   {skillset.skills.map((skill) => (
                     <Pill>{skill}</Pill>
                   ))}
