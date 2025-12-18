@@ -58,7 +58,9 @@ export const ResumeSection = ({ resume }: ResumeSectionProps) => {
               {resume.info.location}
             </div>
           </div>
-          <div className="text-center responsive-margin">{resume.aboutMe}</div>
+          <div className="responsive-margin text-box text-center">
+            {resume.aboutMe}
+          </div>
         </StackingCard>
 
         <StackingCard>
@@ -77,7 +79,7 @@ export const ResumeSection = ({ resume }: ResumeSectionProps) => {
             <div className="text-bold text-lg">{resume.education.title}</div>
             <div className="text-sm">{resume.education.place}</div>
             <div className="text-xxs">{resume.education.timespan}</div>
-            <div className="responsive-margin">
+            <div className="responsive-margin text-box">
               {resume.education.description}
             </div>
           </div>
