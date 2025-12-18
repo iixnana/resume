@@ -70,6 +70,7 @@
 
 .card-content--center {
     justify-content: center;
+    align-items: center;
 }
 
 .card-title {
@@ -253,4 +254,9 @@
 
 .legend-native {
     opacity: 1;
+}
+
+.text-box {
+    max-width: 600px;
+    overflow-y: auto;
 }
