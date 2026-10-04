@@ -5,7 +5,7 @@
     "lastName": "Nanartonyte",
     "location": "Oslo, Norway",
     "contact": {
-      "email": "me@kamile.tech",
+      "email": "kamile.the.builder@gmail.com",
       "linkedin": "https://www.linkedin.com/in/kamile-nanartonyte"
     }
   },
@@ -18,9 +18,16 @@
   },
   "experience": [
     {
+      "title": "Senior Software Engineer",
+      "place": "Autodesk",
+      "timespan": "APR 2026 - OCT 2026",
+      "languages": "Typescript",
+      "description": "Shipped features across the re-envisioned Site Design, most notably originating a parking mode prototype from a customer need discovered in a client meeting, which grew into a top strategy priority. Also delivered volume bodies, entity conversion and toolbar improvements, strengthened delivery with a CI vulnerability gate, and drove cross-functional impact through the Design System 3.0 initiative and Autodesk Assistant adoption research. Invested continuously in refining an AI-assisted workflow, mastering tools like Claude and learning their limitations, which significantly increased delivery speed."
+    },
+    {
       "title": "Software Engineer",
       "place": "Distribution Innovation",
-      "timespan": "DEC 2023 - NOW",
+      "timespan": "DEC 2023 - APR 2026",
       "languages": "Java, Typescript",
       "description": "Developing and maintaining eCommerce package system features using Java and React. Took ownership of frontend development within the team, setting standards and applying modern best practices to improve speed and reliability. Rebuilt the entire frontend from scratch with a new design system and full test coverage. Implemented code style standardization with Checkstyle, ESLint, Prettier, and GitHub Actions to ensure consistency and reduce review load. Automated frontend API integrations using OpenAPI and custom Mustache templates, and mastered testing with Playwright, Ladle, and Vitest."
     },
