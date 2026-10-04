@@ -1,7 +1,7 @@
 # My Resume as a Website
 This is my personal resume website, designed as a concise showcase of my frontend development skills. The project is intended solely for personal use and should not be reproduced in full. The logo and all visual elements are original creations and may not be copied or used without permission.
 
-The production version is live at https://www.kamile.tech
+The production version is live at https://www.kamile.no
 
 # Running the project
 Prerequisites:
