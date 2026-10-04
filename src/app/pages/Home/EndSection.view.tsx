@@ -5,7 +5,7 @@ export const EndSection = () => {
     <section id="end-section" className="end-section">
       <div className="footer-box">
         <div>(┛❍ᴥ❍ )┛彡┻━┻</div>
-        <div>Kamile @ 2025</div>
+        <div>Kamile @ 2026</div>
       </div>
     </section>
   );

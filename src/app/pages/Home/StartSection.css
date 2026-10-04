@@ -46,7 +46,12 @@
 
 
 .welcome-description {
-    text-align: center;
+    text-align: left;
+
+    p {
+        padding-bottom: 8px;
+        text-align: justify;
+    }
 }
 
 .table {
